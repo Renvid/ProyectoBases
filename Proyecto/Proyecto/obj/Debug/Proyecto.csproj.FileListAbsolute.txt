@@ -1,0 +1,134 @@
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Facturacion.g.cs
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Login.g.cs
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Clientes.g.cs
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProductos.g.cs
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProveedores.g.cs
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoRoles.g.cs
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoUsuarios.g.cs
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Menu.g.cs
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\App.g.cs
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto_MarkupCompile.cache
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto_MarkupCompile.lref
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Facturacion.baml
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Login.baml
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Clientes.baml
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProductos.baml
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProveedores.baml
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoRoles.baml
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoUsuarios.baml
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Menu.baml
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.g.resources
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\Yenny\Desktop\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Facturacion.g.cs
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Login.g.cs
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Clientes.g.cs
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProductos.g.cs
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProveedores.g.cs
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoRoles.g.cs
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoUsuarios.g.cs
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Menu.g.cs
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\App.g.cs
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto_MarkupCompile.cache
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto_MarkupCompile.lref
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Facturacion.baml
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Login.baml
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Clientes.baml
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProductos.baml
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProveedores.baml
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoRoles.baml
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoUsuarios.baml
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Menu.baml
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.g.resources
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\Brayan\Desktop\Proyecto Inge 3.9\Proyecto Inge 3.9\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Facturacion.g.cs
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Login.g.cs
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Clientes.g.cs
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProductos.g.cs
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProveedores.g.cs
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoRoles.g.cs
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoUsuarios.g.cs
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Menu.g.cs
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\App.g.cs
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto_MarkupCompile.cache
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto_MarkupCompile.lref
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Facturacion.baml
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Login.baml
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Clientes.baml
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProductos.baml
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoProveedores.baml
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoRoles.baml
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\MantenimientoUsuarios.baml
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Menu.baml
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.g.resources
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\Yenny\Desktop\Sistema de Inventario y Facturación DELRAM (SIF)\Proyecto Inge 4.0\Proyecto Inge 4.0\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\App.g.cs
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto_MarkupCompile.cache
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto_MarkupCompile.lref
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.g.resources
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\Facturacion.g.cs
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\Login.g.cs
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\Clientes.g.cs
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoProductos.g.cs
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoProveedores.g.cs
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoRoles.g.cs
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoUsuarios.g.cs
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\Menu.g.cs
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\Facturacion.baml
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\Login.baml
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\Clientes.baml
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoProductos.baml
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoProveedores.baml
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoRoles.baml
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoUsuarios.baml
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Vista\Menu.baml
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Entidades.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Logica.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Datos.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Oracle.DataAccess.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Entidades.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Logica.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\bin\Debug\Datos.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CopyComplete
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Vista\Facturacion.g.cs
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Vista\Login.g.cs
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Vista\Clientes.g.cs
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoProductos.g.cs
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoProveedores.g.cs
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoRoles.g.cs
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Vista\MantenimientoUsuarios.g.cs
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Vista\Menu.g.cs
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\App.g.cs
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Proyecto_MarkupCompile.cache
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Proyecto_MarkupCompile.lref
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\minor\Desktop\Bases\Proyecto\Proyecto\obj\Debug\Proyecto.pdb

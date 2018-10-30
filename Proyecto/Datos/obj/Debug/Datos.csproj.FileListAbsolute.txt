@@ -1,0 +1,18 @@
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Datos\bin\Debug\Datos.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Datos\bin\Debug\Datos.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Datos\bin\Debug\Entidades.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Datos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Datos\bin\Debug\Entidades.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Datos\obj\Debug\Datos.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Datos\obj\Debug\Datos.pdb
+C:\Users\minor\Desktop\Bases\Proyecto\Datos\bin\Debug\Datos.dll
+C:\Users\minor\Desktop\Bases\Proyecto\Datos\bin\Debug\Datos.pdb
+C:\Users\minor\Desktop\Bases\Proyecto\Datos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\minor\Desktop\Bases\Proyecto\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\minor\Desktop\Bases\Proyecto\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\minor\Desktop\Bases\Proyecto\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\minor\Desktop\Bases\Proyecto\Datos\obj\Debug\Datos.dll
+C:\Users\minor\Desktop\Bases\Proyecto\Datos\obj\Debug\Datos.pdb

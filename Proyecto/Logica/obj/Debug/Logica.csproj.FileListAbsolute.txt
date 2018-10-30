@@ -1,0 +1,22 @@
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\bin\Debug\Logica.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\bin\Debug\Logica.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\bin\Debug\Datos.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\bin\Debug\Entidades.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\bin\Debug\Oracle.DataAccess.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\bin\Debug\Datos.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\bin\Debug\Entidades.pdb
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\obj\Debug\Logica.csprojAssemblyReference.cache
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\obj\Debug\Logica.dll
+C:\Users\minor\Desktop\Proyecto Inge 4.1\Inventario-Facturacion\Proyecto\Logica\obj\Debug\Logica.pdb
+C:\Users\minor\Desktop\Bases\Proyecto\Logica\obj\Debug\Logica.csprojAssemblyReference.cache
+C:\Users\minor\Desktop\Bases\Proyecto\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\minor\Desktop\Bases\Proyecto\Logica\obj\Debug\Logica.dll
+C:\Users\minor\Desktop\Bases\Proyecto\Logica\obj\Debug\Logica.pdb
+C:\Users\minor\Desktop\Bases\Proyecto\Logica\bin\Debug\Logica.dll
+C:\Users\minor\Desktop\Bases\Proyecto\Logica\bin\Debug\Logica.pdb
+C:\Users\minor\Desktop\Bases\Proyecto\Logica\bin\Debug\Datos.dll
+C:\Users\minor\Desktop\Bases\Proyecto\Logica\bin\Debug\Oracle.DataAccess.dll
+C:\Users\minor\Desktop\Bases\Proyecto\Logica\bin\Debug\Datos.pdb
+C:\Users\minor\Desktop\Bases\Proyecto\Logica\obj\Debug\Logica.csproj.CopyComplete
