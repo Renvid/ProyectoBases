@@ -73,6 +73,7 @@
                     <Label x:Name="txt_Copy6" Content="Digite la contraseña:" Margin="42,360,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="302"/>
                     <TextBox x:Name="txb_contrasena_schema" Margin="362,360,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
                     <Label x:Name="txt_Copy7" Content="RESPALDO FULL SYSTEM " Margin="337,426,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="222"/>
+                    <Button x:Name="Respaldo" Grid.ColumnSpan="2" Content="Ver Respaldos" HorizontalAlignment="Left" Margin="729,211,0,0" VerticalAlignment="Top" Width="118" Height="72" Click="Respaldo_Click"/>
                 </Grid>
 
             </TabItem>
@@ -192,14 +193,15 @@
                     <Label x:Name="lbl_CrearTbsTmp" Content="Crear tablespace temporal" Foreground="White" HorizontalAlignment="Left" Height="40" Margin="31,252,0,0" VerticalAlignment="Top" Width="212"/>
                     <Label x:Name="lbl_NomTbs" Content="Nombre del tablespace:" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="37,96,0,0" VerticalAlignment="Top" Width="184"/>
                     <Label x:Name="lbl_TamTbs" Content="Tamaño a asignar:" Foreground="White" HorizontalAlignment="Left" Height="34" Margin="37,146,0,0" VerticalAlignment="Top" Width="184"/>
-                    <TextBox x:Name="txb_NomTbs" HorizontalAlignment="Left" Height="28" Margin="235,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
-                    <TextBox x:Name="txb_TamTbs" HorizontalAlignment="Left" Height="34" Margin="235,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
-                    <TextBox x:Name="txb_NomTbsTmp" HorizontalAlignment="Left" Height="28" Margin="235,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
-                    <TextBox x:Name="txb_TamTbsTmp" HorizontalAlignment="Left" Height="34" Margin="235,364,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+                    <TextBox x:Name="txb_NomTbs" HorizontalAlignment="Left" Height="27" Margin="235,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+                    <TextBox x:Name="txb_TamTbs" HorizontalAlignment="Left" Height="27" Margin="235,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+                    <TextBox x:Name="txb_NomTbsTmp" HorizontalAlignment="Left" Height="27" Margin="235,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+                    <TextBox x:Name="txb_TamTbsTmp" HorizontalAlignment="Left" Height="27" Margin="235,364,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
                     <Label x:Name="lbl_NomTbsTmp" Content="Nombre del tablespace:" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="37,314,0,0" VerticalAlignment="Top" Width="184"/>
                     <Label x:Name="lbl_TamTbsTmp" Content="Tamaño a asignar:" Foreground="White" HorizontalAlignment="Left" Height="34" Margin="37,364,0,0" VerticalAlignment="Top" Width="184"/>
                     <Button x:Name="btn_CrearTbs" Content="Crear" HorizontalAlignment="Left" Height="24" Margin="235,202,0,0" VerticalAlignment="Top" Width="100" Click="btn_CrearTbs_Click"/>
                     <Button x:Name="btn_CrearTbsTmp" Content="Crear" HorizontalAlignment="Left" Height="24" Margin="235,428,0,0" VerticalAlignment="Top" Width="100" Click="btn_CrearTbsTmp_Click"/>
+                    <Button x:Name="verTableSpace" Content="  Ver &#xD;&#xA; Table&#xD;&#xA;Space" HorizontalAlignment="Left" Margin="501,94,0,0" VerticalAlignment="Top" Width="75" Height="71" Click="verTableSpace_Click"/>
 
                 </Grid>
             </TabItem>

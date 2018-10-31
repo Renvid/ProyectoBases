@@ -96,5 +96,19 @@ namespace ProyectoBases
         {
             datos.CrearTablespaceTmp(txb_NomTbsTmp.Text, Convert.ToInt32(txb_TamTbsTmp.Text));
         }
+
+        private void Respaldo_Click(object sender, RoutedEventArgs e)
+        {
+            Process proceso = new Process();
+            proceso.StartInfo.FileName = @"C:\Backup";
+            proceso.Start();
+        }
+
+        private void verTableSpace_Click(object sender, RoutedEventArgs e)
+        {
+            Process proceso = new Process();
+            proceso.StartInfo.FileName = @"C:\oraclexe\app\oracle\oradata\XE";
+            proceso.Start();
+        }
     }
 }

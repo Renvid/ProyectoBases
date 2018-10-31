@@ -22,7 +22,7 @@ namespace Datos
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
 
-            cmd.StandardInput.WriteLine("EXPDP " + conexion + "/" + contrasena + "@XE TABLES=ELECTORAL." + nombre_tabla + " DIRECTORY=RESPALDO DUMPFILE=" + nombre_tabla + ".DMP LOGFILE=" + nombre_tabla + ".LOG;");
+            cmd.StandardInput.WriteLine("EXPDP " + conexion + "/" + contrasena + "@XE TABLES="+conexion+"." + nombre_tabla + " DIRECTORY=RESPALDO DUMPFILE=" + nombre_tabla + ".DMP LOGFILE=" + nombre_tabla + ".LOG;");
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             cmd.WaitForExit();
@@ -71,7 +71,7 @@ namespace Datos
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
 
-            cmd.StandardInput.WriteLine("IMPDP " + conexion + "/" + contrasena + "@XE TABLES=ELECTORAL." + nombre_tabla + " DIRECTORY=RESPALDO DUMPFILE=" + nombre_tabla + ".DMP LOGFILE=" + nombre_tabla + ".LOG;");
+            cmd.StandardInput.WriteLine("IMPDP " + conexion + "/" + contrasena + "@XE TABLES="+conexion+"." + nombre_tabla + " DIRECTORY=RESPALDO DUMPFILE=" + nombre_tabla + ".DMP LOGFILE=" + nombre_tabla + ".LOG;");
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             cmd.WaitForExit();
@@ -117,9 +117,9 @@ namespace Datos
             conn.Open();
             OracleCommand comando = new OracleCommand();
             comando.Connection = conn;
-            comando.CommandText = "ALTER DATABASE DATAFILE 'C:/oraclexe/app/oracle/oradata/XE/ELECTORAL1.DBF' RESIZE 512M;";
+            comando.CommandText = "ALTER DATABASE DATAFILE 'C:/oraclexe/app/oracle/oradata/XE/ELECTORAL1.DBF' RESIZE 600M";
             OracleDataReader dr = comando.ExecuteReader();
-            int v_Resultado = comando.ExecuteNonQuery();
+            //int v_Resultado = comando.ExecuteNonQuery();
             conn.Close();
         }
 
