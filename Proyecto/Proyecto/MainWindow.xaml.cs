@@ -80,5 +80,21 @@ namespace ProyectoBases
         {
             datos.Incremetar();
         }
+
+        private void btn_CrearTbs_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                datos.CrearTablespace(txb_NomTbs.Text, Convert.ToInt32(txb_TamTbs.Text));
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btn_CrearTbsTmp_Click(object sender, RoutedEventArgs e)
+        {
+            datos.CrearTablespaceTmp(txb_NomTbsTmp.Text, Convert.ToInt32(txb_TamTbsTmp.Text));
+        }
     }
 }

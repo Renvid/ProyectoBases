@@ -20,3 +20,13 @@ C:\Users\minor\Desktop\Bases\Proyecto\Logica\bin\Debug\Datos.dll
 C:\Users\minor\Desktop\Bases\Proyecto\Logica\bin\Debug\Oracle.DataAccess.dll
 C:\Users\minor\Desktop\Bases\Proyecto\Logica\bin\Debug\Datos.pdb
 C:\Users\minor\Desktop\Bases\Proyecto\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Logica\bin\Debug\Logica.dll
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Logica\bin\Debug\Logica.pdb
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Logica\bin\Debug\Datos.dll
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Logica\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Logica\bin\Debug\Datos.pdb
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Logica\obj\Debug\Logica.csprojAssemblyReference.cache
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Logica\obj\Debug\Logica.dll
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Logica\obj\Debug\Logica.pdb

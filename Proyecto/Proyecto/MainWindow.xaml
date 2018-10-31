@@ -158,6 +158,51 @@
                     <Button Content="Button" HorizontalAlignment="Left" Margin="138,70,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_6"/>
                 </Grid>
             </TabItem>
+            <TabItem Margin="0.2,0,-11.6,0.2" Padding="10">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FF474747" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Imagenes/edit-16.png" />
+                        <TextBlock Text=" Tablespaces" Foreground="Black" VerticalAlignment="Center" Width="112" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="638*"/>
+                        <RowDefinition Height="13*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="0*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF062066" Offset="1"/>
+                            <GradientStop Color="#FF040608"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Label x:Name="lbl_CreaTbs" Content="Crear tablespace" Foreground="White" HorizontalAlignment="Left" Height="30" Margin="31,36,0,0" VerticalAlignment="Top" Width="212"/>
+                    <Label x:Name="lbl_CrearTbsTmp" Content="Crear tablespace temporal" Foreground="White" HorizontalAlignment="Left" Height="40" Margin="31,252,0,0" VerticalAlignment="Top" Width="212"/>
+                    <Label x:Name="lbl_NomTbs" Content="Nombre del tablespace:" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="37,96,0,0" VerticalAlignment="Top" Width="184"/>
+                    <Label x:Name="lbl_TamTbs" Content="Tamaño a asignar:" Foreground="White" HorizontalAlignment="Left" Height="34" Margin="37,146,0,0" VerticalAlignment="Top" Width="184"/>
+                    <TextBox x:Name="txb_NomTbs" HorizontalAlignment="Left" Height="28" Margin="235,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+                    <TextBox x:Name="txb_TamTbs" HorizontalAlignment="Left" Height="34" Margin="235,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+                    <TextBox x:Name="txb_NomTbsTmp" HorizontalAlignment="Left" Height="28" Margin="235,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+                    <TextBox x:Name="txb_TamTbsTmp" HorizontalAlignment="Left" Height="34" Margin="235,364,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+                    <Label x:Name="lbl_NomTbsTmp" Content="Nombre del tablespace:" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="37,314,0,0" VerticalAlignment="Top" Width="184"/>
+                    <Label x:Name="lbl_TamTbsTmp" Content="Tamaño a asignar:" Foreground="White" HorizontalAlignment="Left" Height="34" Margin="37,364,0,0" VerticalAlignment="Top" Width="184"/>
+                    <Button x:Name="btn_CrearTbs" Content="Crear" HorizontalAlignment="Left" Height="24" Margin="235,202,0,0" VerticalAlignment="Top" Width="100" Click="btn_CrearTbs_Click"/>
+                    <Button x:Name="btn_CrearTbsTmp" Content="Crear" HorizontalAlignment="Left" Height="24" Margin="235,428,0,0" VerticalAlignment="Top" Width="100" Click="btn_CrearTbsTmp_Click"/>
+
+                </Grid>
+            </TabItem>
         </TabControl>
         <Label Content="Administración de Bases de Datos  " HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="20" Margin="15,10,0,0"/>
 

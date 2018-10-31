@@ -40,5 +40,15 @@ namespace Logica
         {
             data.Incrementar();
         }
+
+        public void CrearTablespace(string nombre, int tam)
+        {
+            data.CrearTablespace(nombre, tam);
+        }
+
+        public void CrearTablespaceTmp(string nombre, int tam)
+        {
+            data.CrearTablespaceTmp(nombre, tam);
+        }
     }
 }

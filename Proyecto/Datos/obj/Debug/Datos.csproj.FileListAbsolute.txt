@@ -16,3 +16,11 @@ C:\Users\minor\Desktop\Bases\Proyecto\Datos\obj\Debug\Datos.csproj.CoreCompileIn
 C:\Users\minor\Desktop\Bases\Proyecto\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\minor\Desktop\Bases\Proyecto\Datos\obj\Debug\Datos.dll
 C:\Users\minor\Desktop\Bases\Proyecto\Datos\obj\Debug\Datos.pdb
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Datos\bin\Debug\Datos.dll
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Datos\bin\Debug\Datos.pdb
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Datos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Datos\obj\Debug\Datos.dll
+C:\Users\Vinicio Pacheco\Documents\GitHub\ProyectoBases\Proyecto\Datos\obj\Debug\Datos.pdb

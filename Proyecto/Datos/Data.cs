@@ -122,5 +122,31 @@ namespace Datos
             int v_Resultado = comando.ExecuteNonQuery();
             conn.Close();
         }
+
+        public void CrearTablespace(string nombre, int tam)
+        {
+             
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "CREATE TABLESPACE " + nombre + " DATAFILE 'C:/oraclexe/app/oracle/oradata/XE/" + nombre + ".dbf' SIZE " + tam + "M ONLINE ";
+            OracleDataReader dr = comando.ExecuteReader();
+            int v_Resultado = comando.ExecuteNonQuery();
+            conn.Close();
+           
+        }
+
+        public void CrearTablespaceTmp(string nombre, int tam)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "CREATE TEMPORARY TABLESPACE " + nombre + " TEMPFILE 'C:/oraclexe/app/oracle/oradata/XE/" + nombre + ".dbf' SIZE " + tam + "M AUTOEXTEND ON ";
+            OracleDataReader dr = comando.ExecuteReader();
+            int v_Resultado = comando.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }
