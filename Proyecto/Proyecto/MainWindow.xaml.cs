@@ -35,14 +35,30 @@ namespace ProyectoBases
         Model datos = new Model();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-                datos.Respaldo_Tabla(txb_conexion_tabla.Text, txb_contrasena_tabla.Text, txb_nombretabla.Text);
+            int valor = datos.Conexion(cmb_Schema.Text, txb_contrasena_tabla.Text);
+            if(valor == 1)
+            {
+                datos.Respaldo_Tabla(cmb_Schema.Text, txb_contrasena_tabla.Text, cmb_Tabla.Text);
                 MessageBox.Show("Respaldo de tabla exitoso", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            }else if (valor == 0)
+            {
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+           
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            datos.Respaldo_Schema(txb_conexion_Schema.Text, txb_contrasena_schema.Text);
-            MessageBox.Show("Respaldo de schema exitoso", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            int valor = datos.Conexion(cmb_Schema_Conexion.Text, txb_contrasena_schema.Text);
+            if (valor == 1)
+            {
+                datos.Respaldo_Schema(cmb_Schema_Conexion.Text, txb_contrasena_schema.Text);
+                MessageBox.Show("Respaldo de schema exitoso", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else if (valor == 0)
+            {
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -53,14 +69,31 @@ namespace ProyectoBases
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            datos.Recuperar_Tabla(txb_conexion_tabla_recuperar.Text, txb_contrasena_tabla_recuperar.Text, txb_recuperartabla.Text);
-            MessageBox.Show("Tabla recuperada exitosamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            int valor = datos.Conexion(cmb_recuperar_nombre.Text, txb_contrasena_tabla_recuperar.Text);
+            if (valor == 1)
+            {
+                datos.Recuperar_Tabla(cmb_recuperar_nombre.Text, txb_contrasena_tabla_recuperar.Text, cmb_recuperar_tabla.Text);
+                MessageBox.Show("Tabla recuperada exitosamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else if (valor == 0)
+            {
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            datos.Recuperar_Schema(txb_conexion_Schema_recuperar.Text, txb_contrasena_schema_recuperar.Text);
-            MessageBox.Show("Schema recuperada exitosamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            int valor = datos.Conexion(cmb_recuperar_schema.Text, txb_contrasena_schema_recuperar.Text);
+            if (valor == 1)
+            {
+                datos.Recuperar_Schema(cmb_recuperar_schema.Text, txb_contrasena_schema_recuperar.Text);
+                MessageBox.Show("Schema recuperada exitosamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else if (valor == 0)
+            {
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
@@ -122,9 +155,68 @@ namespace ProyectoBases
         private void verTableSpace_Click(object sender, RoutedEventArgs e)
         {
             Mostar_TableSpace();
+        }
+
+        private void btn_AgregarDataFile_Click(object sender, RoutedEventArgs e)
+        {
+            datos.DataFile(txb_Nom_Agregar.Text, txb_NomAgregarDataFile.Text, txb_Tam_Agregar.Text);
+            MessageBox.Show("Datafile agregado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            Mostar_TableSpace();
+        }
+
+        private void verFicheros_Click(object sender, RoutedEventArgs e)
+        {
             Process proceso = new Process();
             proceso.StartInfo.FileName = @"C:\oraclexe\app\oracle\oradata\XE";
             proceso.Start();
+        }
+
+        private void cmb_Schema_Initialized(object sender, EventArgs e)
+        {
+            Iniciar_Nombre_Combo_Schema(cmb_Schema);
+        }
+
+        private void cmb_Schema_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Combo_Dependiente(cmb_Schema,cmb_Tabla);
+        }
+
+        private void cmb_Schema_Conexion_Initialized(object sender, EventArgs e)
+        {
+            Iniciar_Nombre_Combo_Schema(cmb_Schema_Conexion);
+        }
+        private void Iniciar_Nombre_Combo_Schema(ComboBox combo)
+        {
+            DataTable dt = datos.Schemas();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                combo.Items.Add(Convert.ToString(fila["USERNAME"]));
+            }
+        }
+        private void Combo_Dependiente(ComboBox padre,ComboBox dependiente)
+        {
+            dependiente.Items.Clear();
+            DataTable dt = datos.Tablas(padre.SelectedItem.ToString());
+            foreach (DataRow fila in dt.Rows)
+            {
+                dependiente.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
+            }
+        }
+
+        private void cmb_recuperar_schema_Initialized(object sender, EventArgs e)
+        {
+            Iniciar_Nombre_Combo_Schema(cmb_recuperar_schema);
+        }
+
+        private void cmb_recuperar_nombre_Initialized(object sender, EventArgs e)
+        {
+            Iniciar_Nombre_Combo_Schema(cmb_recuperar_nombre);
+        }
+
+        private void cmb_recuperar_nombre_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Combo_Dependiente(cmb_recuperar_nombre,cmb_recuperar_tabla);
         }
     }
 }

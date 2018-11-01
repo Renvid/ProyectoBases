@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoBases"
         mc:Ignorable="d"
-        Title="" Height="784" Width="1238.4" FontFamily="Global Sans Serif"    WindowState="Maximized" ResizeMode="CanResizeWithGrip" WindowStyle="None" FontSize="16" MinWidth="1000" MinHeight="600" >
+        Title="" Height="849.6" Width="1438.4" FontFamily="Global Sans Serif"    WindowState="Maximized" ResizeMode="CanResizeWithGrip" WindowStyle="None" FontSize="16" MinWidth="1000" MinHeight="600" >
     <Grid Margin="0,0,-6,-0.4">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -59,20 +59,20 @@
                     <Button Content="Tabla" VerticalAlignment="Top" Click="Button_Click" Margin="634,149,0,0" HorizontalAlignment="Left" Width="75"/>
                     <Button Content="Schema" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Margin="634,335,0,0"/>
                     <Button Content="Full" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click_2" Margin="421,480,0,0"/>
-                    <Label x:Name="txt_nombretabla" Content="Digite el nombre de la tabla a respaldar:" Margin="42,195,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
-                    <TextBox x:Name="txb_nombretabla" Margin="362,196,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
+                    <Label x:Name="txt_nombretabla" Content="Seleccione la tabla a respaldar:" Margin="42,195,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
                     <Label x:Name="txt" Content="RESPALDO DE TABLAS " Margin="337,48,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="204"/>
                     <Label x:Name="txt_Copy" Content="Digite el nombre del Schema:" Margin="42,305,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="302"/>
-                    <Label x:Name="contrasena" Content="Digite la contraseña de la conexion:" Margin="42,149,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
+                    <Label x:Name="contrasena" Content="Digite la contraseña del Usuario:" Margin="42,149,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
                     <TextBox x:Name="txb_contrasena_tabla" Margin="362,150,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
-                    <Label x:Name="txt_nombreconexion" Content="Digite el nombre de la conexion:" Margin="42,105,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
-                    <TextBox x:Name="txb_conexion_tabla" Margin="362,106,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
+                    <Label x:Name="txt_nombreconexion" Content="Seleccione el Usuario:" Margin="42,105,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
                     <Label x:Name="txt_Copy5" Content="RESPALDO DE SCHEMA " Margin="337,252,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="204"/>
-                    <TextBox x:Name="txb_conexion_Schema" Margin="362,305,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
                     <Label x:Name="txt_Copy6" Content="Digite la contraseña:" Margin="42,360,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="302"/>
                     <TextBox x:Name="txb_contrasena_schema" Margin="362,360,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
                     <Label x:Name="txt_Copy7" Content="RESPALDO FULL SYSTEM " Margin="337,426,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="222"/>
                     <Button x:Name="Respaldo" Grid.ColumnSpan="2" Content="Ver Respaldos" HorizontalAlignment="Left" Margin="729,211,0,0" VerticalAlignment="Top" Width="118" Height="72" Click="Respaldo_Click"/>
+                    <ComboBox x:Name="cmb_Schema" HorizontalAlignment="Left" Margin="362,105,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Schema_Initialized" SelectionChanged="cmb_Schema_SelectionChanged"/>
+                    <ComboBox x:Name="cmb_Tabla" HorizontalAlignment="Left" Margin="362,197,0,0" VerticalAlignment="Top" Width="237" Height="27"/>
+                    <ComboBox x:Name="cmb_Schema_Conexion" HorizontalAlignment="Left" Margin="362,307,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Schema_Conexion_Initialized" />
                 </Grid>
 
             </TabItem>
@@ -111,18 +111,18 @@
                     <Button Content="Recuperar Schema" HorizontalAlignment="Left" Margin="641,328,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.12,-0.479" Click="Button_Click_4"/>
                     <Button Content="Recuperar Full" HorizontalAlignment="Left" Margin="402,465,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click_5"/>
                     <Label x:Name="txt_Copy2" Content="RECUPERAR TABLAS" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="183" Margin="347,35,0,0"/>
-                    <TextBox x:Name="txb_recuperartabla" Margin="362,161,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
                     <Label x:Name="txt_nombretabla_Copy" Content="Digite el nombre de la tabla a recuperar:" Margin="42,159,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
                     <Label x:Name="contrasena_Copy" Content="Digite la contraseña de la conexion:" Margin="42,113,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
                     <TextBox x:Name="txb_contrasena_tabla_recuperar" Margin="362,114,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
                     <Label x:Name="txt_nombreconexion_Copy" Content="Digite el nombre de la conexion:" Margin="42,69,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
-                    <TextBox x:Name="txb_conexion_tabla_recuperar" Margin="362,70,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
                     <Label x:Name="txt_Copy3" Content="Digite el nombre del Schema:" Margin="42,289,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="302"/>
                     <Label x:Name="txt_Copy4" Content="RECUPERAR  SCHEMA " Margin="357,236,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="218"/>
-                    <TextBox x:Name="txb_conexion_Schema_recuperar" Margin="362,289,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
                     <Label x:Name="txt_Copy8" Content="Digite la contraseña:" Margin="42,344,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="302"/>
                     <TextBox x:Name="txb_contrasena_schema_recuperar" Margin="362,344,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
                     <Label x:Name="txt_Copy9" Content="RECUPERAR FULL SYSTEM" Margin="363,409,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="236"/>
+                    <ComboBox x:Name="cmb_recuperar_nombre" HorizontalAlignment="Left" Margin="363,69,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_recuperar_nombre_Initialized" SelectionChanged="cmb_recuperar_nombre_SelectionChanged" />
+                    <ComboBox x:Name="cmb_recuperar_tabla" HorizontalAlignment="Left" Margin="363,161,0,0" VerticalAlignment="Top" Width="237" Height="27"/>
+                    <ComboBox x:Name="cmb_recuperar_schema" HorizontalAlignment="Left" Margin="363,289,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_recuperar_schema_Initialized" />
                 </Grid>
             </TabItem>
             <TabItem Margin="0.2,0,-11.6,0.2" Padding="10">
@@ -198,8 +198,8 @@
                     <Label x:Name="lbl_NomTbsTmp" Content="Nombre del tablespace:" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="37,314,0,0" VerticalAlignment="Top" Width="184"/>
                     <Label x:Name="lbl_TamTbsTmp" Content="Tamaño a asignar:" Foreground="White" HorizontalAlignment="Left" Height="34" Margin="37,364,0,0" VerticalAlignment="Top" Width="184"/>
                     <Button x:Name="btn_CrearTbs" Content="Crear" HorizontalAlignment="Left" Height="24" Margin="235,202,0,0" VerticalAlignment="Top" Width="100" Click="btn_CrearTbs_Click"/>
-                    <Button x:Name="btn_CrearTbsTmp" Content="Crear" HorizontalAlignment="Left" Height="24" Margin="235,428,0,0" VerticalAlignment="Top" Width="100" Click="btn_CrearTbsTmp_Click"/>
-                    <Button x:Name="verTableSpace" Content="  Ver &#xD;&#xA; Table&#xD;&#xA;Space" HorizontalAlignment="Left" Margin="501,94,0,0" VerticalAlignment="Top" Width="75" Height="71" Click="verTableSpace_Click"/>
+                    <Button x:Name="btn_CrearTbsTmp" Content="Crear" HorizontalAlignment="Left" Height="24" Margin="235,414,0,0" VerticalAlignment="Top" Width="100" Click="btn_CrearTbsTmp_Click"/>
+                    <Button x:Name="verTableSpace" Content="  Ver &#xD;&#xA; Table&#xD;&#xA;Space" HorizontalAlignment="Left" Margin="1187,15,0,0" VerticalAlignment="Top" Width="75" Height="71" Click="verTableSpace_Click"/>
                     <Button Content="Ajustar" HorizontalAlignment="Left" Margin="842,210,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_6"/>
                     <Label x:Name="lbl_AjusTam" Content="Ajustar tamaño tablespace:" Foreground="White" HorizontalAlignment="Left" Height="30" Margin="630,44,0,0" VerticalAlignment="Top" Width="212"/>
                     <Label x:Name="lbl_NomTbs_Copy" Content="Nombre del tablespace:" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="636,104,0,0" VerticalAlignment="Top" Width="184"/>
@@ -207,6 +207,15 @@
                     <TextBox x:Name="txb_NomTbs_ajustar" HorizontalAlignment="Left" Height="27" Margin="842,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
                     <TextBox x:Name="txb_TamTbs_ajustar" HorizontalAlignment="Left" Height="27" Margin="842,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
                     <DataGrid x:Name="dtg_Mostar_Tbl" Height="356" Margin="636,252,30,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_AgregarDatafile" Content="Agregar Datafile" Foreground="White" HorizontalAlignment="Left" Height="40" Margin="31,448,0,0" VerticalAlignment="Top" Width="212"/>
+                    <TextBox x:Name="txb_Nom_Agregar" HorizontalAlignment="Left" Height="27" Margin="235,510,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+                    <TextBox x:Name="txb_Tam_Agregar" HorizontalAlignment="Left" Height="27" Margin="235,560,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+                    <Label x:Name="lbl_NomTbsTmp_Copy" Content="Nombre del tablespace:" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="37,510,0,0" VerticalAlignment="Top" Width="184"/>
+                    <Label x:Name="lbl_TamTbsTmp_Copy" Content="Tamaño a asignar:" Foreground="White" HorizontalAlignment="Left" Height="34" Margin="37,560,0,0" VerticalAlignment="Top" Width="184"/>
+                    <Button x:Name="btn_AgregarDataFile" Content="Agregar" HorizontalAlignment="Left" Height="24" Margin="235,658,0,0" VerticalAlignment="Top" Width="100" Click="btn_AgregarDataFile_Click" />
+                    <TextBox x:Name="txb_NomAgregarDataFile" HorizontalAlignment="Left" Height="27" Margin="235,607,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+                    <Label x:Name="lbl_NomTbsTmp_Copy1" Content="Nombre del DataFile:" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="37,607,0,0" VerticalAlignment="Top" Width="184"/>
+                    <Button x:Name="verFicheros" Content="    Ver &#xA; Ficheros" HorizontalAlignment="Left" Margin="1187,117,0,0" VerticalAlignment="Top" Width="75" Height="71" Click="verFicheros_Click" />
 
                 </Grid>
             </TabItem>

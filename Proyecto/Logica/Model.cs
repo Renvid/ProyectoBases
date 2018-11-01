@@ -54,5 +54,22 @@ namespace Logica
         {
             return data.Mostrar_TableSpace();
         }
-    }
+        public void DataFile(string schema, string nombre, string size)
+        {
+            data.DataFile(schema,nombre,size);
+        }
+        public DataTable Schemas()
+        {
+            return data.Schemas();
+        }
+        public DataTable Tablas(string nombre)
+        {
+            return data.Tablas(nombre);
+        }
+        public int Conexion(string conexion, string contrasena)
+        {
+            return data.Conexion(conexion, contrasena);
+        }
+
+        }
 }

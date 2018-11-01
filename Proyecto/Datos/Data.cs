@@ -12,6 +12,21 @@ namespace Datos
     public class Data
     {
 
+        public int Conexion(string conexion,string contrasena)
+        {
+            string v_Conn = "DATA SOURCE=localhost:1521/XE;PERSIST SECURITY INFO=True;USER ID=" + conexion + ";PASSWORD = " + contrasena + "";
+            try
+            {
+                OracleConnection conn = new OracleConnection(v_Conn);
+                conn.Open();
+                conn.Close();
+                return 1;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
         public void Respaldo_Tabla(string conexion, string contrasena, string nombre_tabla)
         {
             Process cmd = new Process();
@@ -159,5 +174,48 @@ namespace Datos
             conn.Close();
             return tabla;
         }
+        public void DataFile(string schema, string nombre,string size)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "ALTER TABLESPACE "+schema+" ADD DATAFILE 'C:/oraclexe/app/oracle/oradata/XE/"+nombre+".DBF' SIZE "+size+"M";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public DataTable Schemas()
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "SELECT USERNAME FROM DBA_USERS";
+
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+
+        public DataTable Tablas(string nombre)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "SELECT TABLE_NAME FROM DBA_TABLES WHERE OWNER = '" + nombre + "'";
+            Console.WriteLine(comando.CommandText);
+            comando.Parameters.Add(new OracleParameter("OWNER", nombre));
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+
     }
 }
