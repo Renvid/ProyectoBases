@@ -36,9 +36,9 @@ namespace Logica
         {
             data.Recuperar_Full();
         }
-        public void Incremetar()
+        public void Incremetar(string nombre,string size)
         {
-            data.Incrementar();
+            data.Incrementar(nombre,size);
         }
 
         public void CrearTablespace(string nombre, int tam)
@@ -49,6 +49,10 @@ namespace Logica
         public void CrearTablespaceTmp(string nombre, int tam)
         {
             data.CrearTablespaceTmp(nombre, tam);
+        }
+        public DataTable Mostrar_TableSpace()
+        {
+            return data.Mostrar_TableSpace();
         }
     }
 }

@@ -78,7 +78,20 @@ namespace ProyectoBases
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            datos.Incremetar();
+            datos.Incremetar(txb_NomTbs_ajustar.Text,txb_TamTbs_ajustar.Text);
+            Mostar_TableSpace();
+
+        }
+        public void Mostar_TableSpace()
+        {
+            dtg_Mostar_Tbl.ItemsSource = datos.Mostrar_TableSpace().DefaultView;
+            dtg_Mostar_Tbl.Columns[0].Header = "TableSpace";
+            dtg_Mostar_Tbl.Columns[1].Header = "Estado";
+            dtg_Mostar_Tbl.Columns[2].Header = "MBTamaño";
+            dtg_Mostar_Tbl.Columns[3].Header = "MBUsados";
+            dtg_Mostar_Tbl.Columns[4].Header = "MBLibres";
+            dtg_Mostar_Tbl.Columns[5].Header = "%Incremeto";
+            dtg_Mostar_Tbl.Columns[6].Header = "Fichero de datos";
         }
 
         private void btn_CrearTbs_Click(object sender, RoutedEventArgs e)
@@ -86,7 +99,9 @@ namespace ProyectoBases
             try
             {
                 datos.CrearTablespace(txb_NomTbs.Text, Convert.ToInt32(txb_TamTbs.Text));
-            }catch(Exception ex)
+                Mostar_TableSpace();
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -106,6 +121,7 @@ namespace ProyectoBases
 
         private void verTableSpace_Click(object sender, RoutedEventArgs e)
         {
+            Mostar_TableSpace();
             Process proceso = new Process();
             proceso.StartInfo.FileName = @"C:\oraclexe\app\oracle\oradata\XE";
             proceso.Start();

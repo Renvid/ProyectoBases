@@ -4,7 +4,7 @@ namespace Datos
 {
     public static class DataBase
     {
-        private static string v_Conn = "DATA SOURCE=localhost:1521/XE;PERSIST SECURITY INFO=True;USER ID=ELECTORAL;PASSWORD = root123";//Establecemos la conexion con la base de datos.
+        private static string v_Conn = "DATA SOURCE=localhost:1521/XE;PERSIST SECURITY INFO=True;USER ID=SYSTEM;PASSWORD = root";//Establecemos la conexion con la base de datos.
 
 
         public static OracleConnection Conexion()
