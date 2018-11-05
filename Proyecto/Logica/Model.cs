@@ -70,6 +70,70 @@ namespace Logica
         {
             return data.Conexion(conexion, contrasena);
         }
-
+        public void CrearUsuario(string nombre, string contrasena)
+        {
+            data.CrearUsuario(nombre,contrasena);
         }
+        public DataTable MostrarUsuarios()
+        {
+            return data.MostrarUsuarios();
+        }
+        public DataTable MostrarDirectorios()
+        {
+            return data.MostrarDirectorios();
+        }
+        public DataTable MostrarPermisosUsuarios(string usuario,string con)
+        {
+            return data.MostrarPermisosUsuarios(usuario,con);
+        }
+        public void PermisoCreate(string user)
+        {
+            data.PermisoCreate(user);
+        }
+        public void PermisoConnect(string user)
+        {
+            data.PermisoConnect(user);
+        }
+        public void PermisoAll(string user)
+        {
+            data.PermisoAll(user);
+        }
+        public void CrearRolContrasena(string user, string contrasena)
+        {
+            data.CrearRolContrasena(user,contrasena);
+        }
+
+        public void CrearRolSinContrasena(string user)
+        {
+            data.CrearRolSinContrasena(user);
+        }
+        public DataTable MostrarRoles()
+        {
+            return data.MostrarRoles();
+        }
+        public DataTable MostrarRoles(string usuario, string contrasena)
+        {
+            return data.MostrarRoles(usuario,contrasena);
+        }
+        public void RolInsert(string schema, string table, string user)
+        {
+            data.RolInsert(schema,table,user);
+        }
+        public void RolUpdate(string schema, string table, string user)
+        {
+            data.RolUpdate(schema, table, user);
+        }
+        public void RolEliminar(string schema, string table, string user)
+        {
+            data.RolEliminar(schema, table, user);
+        }
+        public void RolSelect(string schema, string table, string user)
+        {
+            data.RolSelect(schema, table, user);
+        }
+        public void AsignarRol(string rol, string user)
+        {
+            data.AsignarRol(rol, user);
+        }
+    }
 }

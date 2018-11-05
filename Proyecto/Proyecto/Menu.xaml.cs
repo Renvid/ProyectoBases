@@ -44,5 +44,12 @@ namespace ProyectoBases
         {
             this.Close();
         }
+
+        private void Mantenimiento_Selected(object sender, RoutedEventArgs e)
+        {
+            Usuarios ventana = new Usuarios();
+            ventana.Show();
+            this.Close();
+        }
     }
 }

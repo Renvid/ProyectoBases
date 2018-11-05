@@ -64,3 +64,5 @@ C:\Users\minor\Desktop\ProyectoBases\Proyecto\Proyecto\obj\Debug\ProyectoBases.c
 C:\Users\minor\Desktop\ProyectoBases\Proyecto\Proyecto\obj\Debug\ProyectoBases.csproj.CopyComplete
 C:\Users\minor\Desktop\ProyectoBases\Proyecto\Proyecto\obj\Debug\Proyecto.exe
 C:\Users\minor\Desktop\ProyectoBases\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\minor\Desktop\ProyectoBases\Proyecto\Proyecto\obj\Debug\Usuarios.g.cs
+C:\Users\minor\Desktop\ProyectoBases\Proyecto\Proyecto\obj\Debug\Usuarios.baml

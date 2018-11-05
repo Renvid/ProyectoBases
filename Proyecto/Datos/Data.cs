@@ -27,6 +27,7 @@ namespace Datos
                 return 0;
             }
         }
+
         public void Respaldo_Tabla(string conexion, string contrasena, string nombre_tabla)
         {
             Process cmd = new Process();
@@ -215,6 +216,201 @@ namespace Datos
             adaptador.Fill(tabla);
             conn.Close();
             return tabla;
+        }
+        public void CrearUsuario(string nombre, string contrasena)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "CREATE USER "+nombre+" IDENTIFIED BY "+contrasena+"";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public DataTable MostrarUsuarios()
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "SELECT USERNAME FROM DBA_USERS";
+
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+        public DataTable MostrarDirectorios()
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "select * from all_directories";
+
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+        public DataTable MostrarPermisosUsuarios(string usuario,string contrasena)
+        {
+            string v_Conn = "DATA SOURCE=localhost:1521/XE;PERSIST SECURITY INFO=True;USER ID=" + usuario + ";PASSWORD = " + contrasena + "";
+            OracleConnection conn = new OracleConnection(v_Conn);
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "select USERNAME,GRANTED_ROLE from user_role_privs";
+            Console.WriteLine(comando.CommandText);
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+
+        public void PermisoCreate (string user)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "GRANT RESOURCE, CREATE SESSION TO "+user+"";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public void PermisoConnect(string user)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "GRANT CONNECT TO " + user + "";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public void PermisoAll(string user)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "GRANT ALL PRIVILEGES TO " + user + "";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+
+        public void CrearRolContrasena(string user,string contrasena)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "CREATE ROLE "+user+" IDENTIFIED BY "+contrasena+"";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+
+        public void CrearRolSinContrasena(string user)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "CREATE ROLE "+user+" NOT IDENTIFIED";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public DataTable MostrarRoles()
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "select ROLE from DBA_ROLES";
+
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+        public DataTable MostrarRoles(string usuario, string contrasena)
+        {
+            string v_Conn = "DATA SOURCE=localhost:1521/XE;PERSIST SECURITY INFO=True;USER ID=" + usuario + ";PASSWORD = " + contrasena + "";
+            OracleConnection conn = new OracleConnection(v_Conn);
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "select role, granted_role from role_role_privs";
+            Console.WriteLine(comando.CommandText);
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+        public void RolInsert(string schema,string table,string user)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "GRANT INSERT ON "+schema+"."+table+" TO "+user+"";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public void RolUpdate(string schema, string table, string user)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "GRANT UPDATE ON " + schema + "." + table + " TO " + user + "";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public void RolEliminar(string schema, string table, string user)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "GRANT DELETE ON " + schema + "." + table + " TO " + user + "";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public void RolSelect(string schema, string table, string user)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "GRANT SELECT ON " + schema + "." + table + " TO " + user + "";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public void AsignarRol(string rol,string user)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            OracleCommand comando2 = new OracleCommand();
+            comando2.Connection = conn;
+            comando.CommandText = "GRANT CONNECT TO "+rol+"";
+            comando2.CommandText = "GRANT "+rol+" TO "+user+"";
+            OracleDataReader dr = comando.ExecuteReader();
+            OracleDataReader dr2 = comando2.ExecuteReader();
+            Console.WriteLine(comando.CommandText);
+            conn.Close();
         }
 
     }

@@ -147,9 +147,7 @@ namespace ProyectoBases
 
         private void Respaldo_Click(object sender, RoutedEventArgs e)
         {
-            Process proceso = new Process();
-            proceso.StartInfo.FileName = @"C:\Backup";
-            proceso.Start();
+            MostrarDirectorios();
         }
 
         private void verTableSpace_Click(object sender, RoutedEventArgs e)
@@ -217,6 +215,20 @@ namespace ProyectoBases
         private void cmb_recuperar_nombre_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Combo_Dependiente(cmb_recuperar_nombre,cmb_recuperar_tabla);
+        }
+        private void MostrarDirectorios()
+        {
+            dtg_MostrarDirectorios.ItemsSource = datos.MostrarDirectorios().DefaultView;
+            dtg_MostrarDirectorios.Columns[0].Header = "Owner";
+            dtg_MostrarDirectorios.Columns[1].Header = "Nombre Directorio";
+            dtg_MostrarDirectorios.Columns[2].Header = "PATH Directorio";
+        }
+
+        private void Respaldo_Mostrar_Click(object sender, RoutedEventArgs e)
+        {
+            Process proceso = new Process();
+            proceso.StartInfo.FileName = @"C:\Backup";
+            proceso.Start();
         }
     }
 }

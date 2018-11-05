@@ -24,28 +24,28 @@
                 <GradientStop Color="#FF38568B" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Grid Background="#FF3472DE" Margin="207,0,-0.4,0" Height="60" VerticalAlignment="Top">
+        <Grid Background="#FF075062" Margin="207,0,-0.4,0" Height="60" VerticalAlignment="Top">
             <TextBlock FontSize="22" Foreground="White" Margin="0" RenderTransformOrigin="0.593,0.555" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text=" Administración de
 Bases de Datos"/><Run Text=""/></TextBlock>
             <Button x:Name="btn_cerrar" VerticalAlignment="Top" Height="30" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}" Click="btn_cerrar_Click" Margin="0,6,4,0" HorizontalAlignment="Right" Width="40">
                 <Image x:Name="img_cancelar_png" Height="16" Source="Imagenes/img_cancelar.png" Stretch="Fill" Width="16"/>
             </Button>
         </Grid>
-        <ListView x:Name="menuVertical" BorderBrush="#FF020202" HorizontalAlignment="Left" Width="207" Background="#FF111429" Margin="0,0,0,-0.4" >
+        <ListView x:Name="menuVertical" BorderBrush="#FF020202" HorizontalAlignment="Left" Width="207" Background="#FF262126" Margin="0,0,0,-0.4" >
 
             <ListViewItem Width="185" Height="104" Visibility="Hidden" />
-            <Separator Height="10" Margin="0" Background="#FF3472DE"/>
+            <Separator Height="10" Margin="0" Background="#FF075062"/>
             <ListViewItem x:Name="Respaldos"   Background="{x:Null}" Width="185" Height="60" Selected="Respaldos_Selected"  >
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="50" Width="175">
-                    <Border BorderBrush="Black" BorderThickness="1" Width="9" Background="#FF3472DE"/>
-                    <Image Source="Imagenes/logo.png" VerticalAlignment="Center" Margin="5,10,5,9.6" HorizontalAlignment="Left"/>
+                    <Border BorderBrush="Black" BorderThickness="1" Width="9" Background="#FF075062"/>
+                    <Image Source="Imagenes/respaldos.png" VerticalAlignment="Center" Margin="5,10,5,9.6" HorizontalAlignment="Left"/>
                     <TextBlock  VerticalAlignment="Center" Margin="10,8,10,1.6" Foreground="White" FontSize="14" FontFamily="Global Sans Serif" Height="40" ><Run Text="Respaldos y "/><LineBreak/><Run Text="Administracion"/></TextBlock>
                 </StackPanel>
             </ListViewItem>
-            <ListViewItem x:Name="Mantenimiento" Width="185" Height="60">
+            <ListViewItem x:Name="Mantenimiento" Width="185" Height="60" Selected="Mantenimiento_Selected">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="50" Width="175">
-                    <Border BorderBrush="Black" BorderThickness="1" Width="9" Background="#FF3472DE"/>
-                    <Image Source="Imagenes\logo.png" Width="30" Height="30" VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left"/>
+                    <Border BorderBrush="Black" BorderThickness="1" Width="9" Background="#FF075062"/>
+                    <Image Source="Imagenes\usuario.png" Width="30" Height="30" VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left"/>
                     <TextBlock Text="Usuarios"  VerticalAlignment="Center" Margin="10,16,10,16.6" Foreground="White" FontSize="14" FontFamily="Global Sans Serif" />
                 </StackPanel>
             </ListViewItem>
@@ -68,7 +68,7 @@ Bases de Datos"/><Run Text=""/></TextBlock>
             <StackPanel/>
         </Button>
         <Image x:Name="logo" Height="100" Source="Imagenes/logo.png" Stretch="Fill" VerticalAlignment="Top" Margin="30,10,0,0" RenderTransformOrigin="1.705,1.316" HorizontalAlignment="Left" Width="150"/>
-        <DockPanel LastChildFill="False" Margin="207,60,-0.4,0.6">
+        <DockPanel LastChildFill="False" Margin="207,60,-0.4,0.6" Background="#FF343134">
 
             <Label Content="Proyecto" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="50" Margin="0,20,0,0" Foreground="White" FontSize="36" FontFamily="Global Sans Serif" Width="232" DockPanel.Dock="Top" />
             <Label Content="Final" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="48" Margin="156,20,176.2,0" VerticalAlignment="Top" Width="255" Foreground="White" FontSize="36" FontFamily="Global Sans Serif" DockPanel.Dock="Top"/>
