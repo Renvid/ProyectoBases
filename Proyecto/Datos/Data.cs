@@ -38,7 +38,7 @@ namespace Datos
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
 
-            cmd.StandardInput.WriteLine("EXPDP " + conexion + "/" + contrasena + "@XE TABLES="+conexion+"." + nombre_tabla + " DIRECTORY=RESPALDO DUMPFILE=" + nombre_tabla + ".DMP LOGFILE=" + nombre_tabla + ".LOG;");
+            cmd.StandardInput.WriteLine("EXPDP " + conexion + "/" + contrasena + "@XE TABLES="+conexion+"." + nombre_tabla + " DIRECTORY=PRUEBA DUMPFILE=" + nombre_tabla + ".DMP LOGFILE=" + nombre_tabla + ".LOG;");
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             cmd.WaitForExit();
@@ -409,8 +409,22 @@ namespace Datos
             comando2.CommandText = "GRANT "+rol+" TO "+user+"";
             OracleDataReader dr = comando.ExecuteReader();
             OracleDataReader dr2 = comando2.ExecuteReader();
-            Console.WriteLine(comando.CommandText);
             conn.Close();
+        }
+        public DataTable RutaDirectorio(string directorio)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "select DIRECTORY_PATH from all_directories where DIRECTORY_NAME = '"+directorio+"'";
+            Console.WriteLine(comando.CommandText);
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
         }
 
     }

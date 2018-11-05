@@ -226,8 +226,13 @@ namespace ProyectoBases
 
         private void Respaldo_Mostrar_Click(object sender, RoutedEventArgs e)
         {
+            DataTable dt = datos.RutaDirectorio("RESPALDO");
+
             Process proceso = new Process();
-            proceso.StartInfo.FileName = @"C:\Backup";
+            foreach (DataRow fila in dt.Rows)
+            {
+                proceso.StartInfo.FileName = @"" + Convert.ToString(fila["DIRECTORY_PATH"]) + "";
+            }
             proceso.Start();
         }
     }

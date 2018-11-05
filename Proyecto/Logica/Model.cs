@@ -135,5 +135,9 @@ namespace Logica
         {
             data.AsignarRol(rol, user);
         }
+        public DataTable RutaDirectorio(string directorio)
+        {
+            return data.RutaDirectorio(directorio);
+        }
     }
 }

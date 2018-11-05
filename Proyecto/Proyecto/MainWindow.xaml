@@ -127,7 +127,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="0*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="dtg_MostrarDirectorios" Height="264" Margin="0,28,733,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="521"/>
+                    <DataGrid x:Name="dtg_MostrarDirectorios" Height="264" Margin="38,28,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="521"/>
                     <Button x:Name="Respaldo" Foreground="White" Content="Ver Directorios" HorizontalAlignment="Left" Margin="597,28,0,0" VerticalAlignment="Top" Width="118" Height="72" Click="Respaldo_Click" Background="#FF075062"/>
                 </Grid>
             </TabItem>
