@@ -42,8 +42,8 @@
                         <ColumnDefinition Width="35*"/>
                         <ColumnDefinition Width="3*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Crear Respaldo&#xD;&#xA;     de Tabla" Foreground="White" VerticalAlignment="Top" Click="Button_Click" Margin="413,256,0,0" HorizontalAlignment="Left" Width="128" Background="#FF075062" Height="40"/>
-                    <Button Content="Crear Respaldo&#xD;&#xA;   de Schema" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="129" Click="Button_Click_1" Margin="412,541,0,0" Background="#FF075062" Height="42"/>
+                    <Button Content="Crear Respaldo&#xD;&#xA;     de Tabla" Foreground="White" VerticalAlignment="Top" Click="Button_Click" Margin="414,311,0,0" HorizontalAlignment="Left" Width="128" Background="#FF075062" Height="40"/>
+                    <Button Content="Crear Respaldo&#xD;&#xA;   de Schema" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="129" Click="Button_Click_1" Margin="413,610,0,0" Background="#FF075062" Height="42"/>
                     <Button Content="Crear Respaldo&#xD;&#xA;          Full" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Click="Button_Click_2" Margin="851,89,0,0" Background="#FF075062" Height="45"/>
                     <Label x:Name="txt_nombretabla" Content="Seleccione la tabla a respaldar:" Margin="42,195,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
                     <Label x:Name="txt" Content="RESPALDO DE TABLAS " Margin="42,43,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="204"/>
@@ -58,7 +58,14 @@
                     <ComboBox x:Name="cmb_Schema" HorizontalAlignment="Left" Margin="362,105,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Schema_Initialized" SelectionChanged="cmb_Schema_SelectionChanged"/>
                     <ComboBox x:Name="cmb_Tabla" HorizontalAlignment="Left" Margin="362,197,0,0" VerticalAlignment="Top" Width="237" Height="27"/>
                     <ComboBox x:Name="cmb_Schema_Conexion" HorizontalAlignment="Left" Margin="362,427,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Schema_Conexion_Initialized" />
-                    <Button x:Name="Respaldo_Mostrar" Foreground="White" Content="Ver Respaldos" HorizontalAlignment="Left" Margin="874,255,0,0" VerticalAlignment="Top" Width="118" Height="72"  Background="#FF075062" Click="Respaldo_Mostrar_Click"/>
+                    <Button x:Name="Respaldo_Mostrar" Foreground="White" Content="Ver Respaldos" HorizontalAlignment="Left" Margin="874,359,0,0" VerticalAlignment="Top" Width="118" Height="72"  Background="#FF075062" Click="Respaldo_Mostrar_Click"/>
+                    <ComboBox x:Name="cmb_Directorio_Schema" HorizontalAlignment="Left" Margin="362,544,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Directorio_Schemas_Initialized"  />
+                    <ComboBox x:Name="cmb_Directorio_Tablas" HorizontalAlignment="Left" Margin="362,255,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Directorio_Tablas_Initialized"  />
+                    <ComboBox x:Name="cmb_Directorio_Ver" HorizontalAlignment="Left" Margin="874,311,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Directorio_Ver_Initialized"  />
+                    <Label x:Name="txt_Copy1" Content="Ver Carpeta Directorios" Margin="829,205,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="222"/>
+                    <Label x:Name="txt_Copy10" Content="Seleccione el directorio: " Margin="42,255,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="222"/>
+                    <Label x:Name="txt_Copy11" Content="Seleccione el directorio: " Margin="42,544,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="222"/>
+                    <Label x:Name="txt_Copy12" Content="Seleccione el directorio: " Margin="874,263,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="222"/>
                 </Grid>
 
             </TabItem>
@@ -86,8 +93,8 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="0*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Recuperar &#xD;&#xA;    Tabla" Foreground="White" HorizontalAlignment="Left" Margin="402,215,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click_3" Background="#FF075062"/>
-                    <Button Content="Recuperar &#xD;&#xA;   Schema" Foreground="White" HorizontalAlignment="Left" Margin="402,465,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.12,-0.479" Click="Button_Click_4" Background="#FF075062"/>
+                    <Button Content="Recuperar &#xD;&#xA;    Tabla" Foreground="White" HorizontalAlignment="Left" Margin="402,268,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click_3" Background="#FF075062"/>
+                    <Button Content="Recuperar &#xD;&#xA;   Schema" Foreground="White" HorizontalAlignment="Left" Margin="402,539,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.12,-0.479" Click="Button_Click_4" Background="#FF075062"/>
                     <Button Content="Recuperar Full" Foreground="White" HorizontalAlignment="Left" Margin="888,99,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click_5" Background="#FF075062" Height="56"/>
                     <Label x:Name="txt_Copy2" Content="RECUPERAR TABLAS" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="183" Margin="42,35,0,0"/>
                     <Label x:Name="txt_nombretabla_Copy" Content="Digite el nombre de la tabla a recuperar:" Margin="42,159,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
@@ -102,6 +109,10 @@
                     <ComboBox x:Name="cmb_recuperar_nombre" HorizontalAlignment="Left" Margin="363,69,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_recuperar_nombre_Initialized" SelectionChanged="cmb_recuperar_nombre_SelectionChanged" />
                     <ComboBox x:Name="cmb_recuperar_tabla" HorizontalAlignment="Left" Margin="363,161,0,0" VerticalAlignment="Top" Width="237" Height="27"/>
                     <ComboBox x:Name="cmb_recuperar_schema" HorizontalAlignment="Left" Margin="363,357,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_recuperar_schema_Initialized" />
+                    <ComboBox x:Name="cmb_Directorio_Tablas_Recperar" HorizontalAlignment="Left" Margin="362,213,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Directorio_Tablas_Recuperar_Initialized"  />
+                    <Label x:Name="txt_Copy13" Content="Seleccione el directorio: " Margin="42,213,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="222"/>
+                    <ComboBox x:Name="cmb_Directorio_Schema_Recuperar" HorizontalAlignment="Left" Margin="362,473,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Directorio_Schema_Recuperar_Initialized"   />
+                    <Label x:Name="txt_Copy14" Content="Seleccione el directorio: " Margin="42,473,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="222"/>
                 </Grid>
             </TabItem>
             <TabItem Margin="0.2,0,-11.6,0.2" Padding="10">
@@ -114,7 +125,7 @@
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Imagenes/edit-16.png" />
-                        <TextBlock Text=" Administración" Foreground="Black" VerticalAlignment="Center" Width="112" />
+                        <TextBlock Text=" Directorios" Foreground="Black" VerticalAlignment="Center" Width="112" />
                     </StackPanel>
                 </TabItem.Header>
                 <Grid Background="#FF262126" >
@@ -127,8 +138,8 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="0*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="dtg_MostrarDirectorios" Height="264" Margin="38,28,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="521"/>
-                    <Button x:Name="Respaldo" Foreground="White" Content="Ver Directorios" HorizontalAlignment="Left" Margin="597,28,0,0" VerticalAlignment="Top" Width="118" Height="72" Click="Respaldo_Click" Background="#FF075062"/>
+                    <DataGrid x:Name="dtg_MostrarDirectorios" Height="264" Margin="38,28,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="699"/>
+                    <Button x:Name="Respaldo" Foreground="White" Content="Ver Directorios" HorizontalAlignment="Left" Margin="774,28,0,0" VerticalAlignment="Top" Width="118" Height="72" Click="Respaldo_Click" Background="#FF075062"/>
                 </Grid>
             </TabItem>
             <TabItem Margin="0.2,0,-11.6,0.2" Padding="10">

@@ -12,25 +12,25 @@ namespace Logica
     {
         Data data = new Data();
 
-        public void Respaldo_Tabla(string conexion, string contrasena, string nombre_tabla)
+        public void Respaldo_Tabla(string conexion, string contrasena, string nombre_tabla,string direc)
         {
-            data.Respaldo_Tabla(conexion,contrasena,nombre_tabla);
+            data.Respaldo_Tabla(conexion,contrasena,nombre_tabla,direc);
         }
-        public void Respaldo_Schema(string conexion, string contrasena)
+        public void Respaldo_Schema(string conexion, string contrasena,string d)
         {
-            data.Respaldo_Schema(conexion,contrasena);
+            data.Respaldo_Schema(conexion,contrasena,d);
         }
         public void Respaldo_Full()
         {
             data.Respaldo_Full();
         }
-        public void Recuperar_Tabla(string conexion, string contrasena, string nombre_tabla)
+        public void Recuperar_Tabla(string conexion, string contrasena, string nombre_tabla,string direc)
         {
-            data.Recuperar_Tabla(conexion,contrasena,nombre_tabla);
+            data.Recuperar_Tabla(conexion,contrasena,nombre_tabla,direc);
         }
-        public void Recuperar_Schema(string conexion, string contrasena)
+        public void Recuperar_Schema(string conexion, string contrasena,string direc)
         {
-            data.Recuperar_Schema(conexion,contrasena);
+            data.Recuperar_Schema(conexion,contrasena,direc);
         }
         public void Recuperar_Full()
         {
@@ -138,6 +138,10 @@ namespace Logica
         public DataTable RutaDirectorio(string directorio)
         {
             return data.RutaDirectorio(directorio);
+        }
+        public DataTable ComboDirectorios()
+        {
+            return data.ComboDirectorios();
         }
     }
 }

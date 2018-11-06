@@ -38,7 +38,7 @@ namespace ProyectoBases
             int valor = datos.Conexion(cmb_Schema.Text, txb_contrasena_tabla.Text);
             if(valor == 1)
             {
-                datos.Respaldo_Tabla(cmb_Schema.Text, txb_contrasena_tabla.Text, cmb_Tabla.Text);
+                datos.Respaldo_Tabla(cmb_Schema.Text, txb_contrasena_tabla.Text, cmb_Tabla.Text,cmb_Directorio_Tablas.Text);
                 MessageBox.Show("Respaldo de tabla exitoso", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
             }else if (valor == 0)
             {
@@ -52,7 +52,7 @@ namespace ProyectoBases
             int valor = datos.Conexion(cmb_Schema_Conexion.Text, txb_contrasena_schema.Text);
             if (valor == 1)
             {
-                datos.Respaldo_Schema(cmb_Schema_Conexion.Text, txb_contrasena_schema.Text);
+                datos.Respaldo_Schema(cmb_Schema_Conexion.Text, txb_contrasena_schema.Text,cmb_Directorio_Schema.Text);
                 MessageBox.Show("Respaldo de schema exitoso", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else if (valor == 0)
@@ -72,7 +72,7 @@ namespace ProyectoBases
             int valor = datos.Conexion(cmb_recuperar_nombre.Text, txb_contrasena_tabla_recuperar.Text);
             if (valor == 1)
             {
-                datos.Recuperar_Tabla(cmb_recuperar_nombre.Text, txb_contrasena_tabla_recuperar.Text, cmb_recuperar_tabla.Text);
+                datos.Recuperar_Tabla(cmb_recuperar_nombre.Text, txb_contrasena_tabla_recuperar.Text, cmb_recuperar_tabla.Text,cmb_Directorio_Tablas_Recperar.Text);
                 MessageBox.Show("Tabla recuperada exitosamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else if (valor == 0)
@@ -87,7 +87,7 @@ namespace ProyectoBases
             int valor = datos.Conexion(cmb_recuperar_schema.Text, txb_contrasena_schema_recuperar.Text);
             if (valor == 1)
             {
-                datos.Recuperar_Schema(cmb_recuperar_schema.Text, txb_contrasena_schema_recuperar.Text);
+                datos.Recuperar_Schema(cmb_recuperar_schema.Text, txb_contrasena_schema_recuperar.Text,cmb_Directorio_Schema_Recuperar.Text);
                 MessageBox.Show("Schema recuperada exitosamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else if (valor == 0)
@@ -226,7 +226,7 @@ namespace ProyectoBases
 
         private void Respaldo_Mostrar_Click(object sender, RoutedEventArgs e)
         {
-            DataTable dt = datos.RutaDirectorio("RESPALDO");
+            DataTable dt = datos.RutaDirectorio(""+cmb_Directorio_Ver.Text+"");
 
             Process proceso = new Process();
             foreach (DataRow fila in dt.Rows)
@@ -234,6 +234,53 @@ namespace ProyectoBases
                 proceso.StartInfo.FileName = @"" + Convert.ToString(fila["DIRECTORY_PATH"]) + "";
             }
             proceso.Start();
+        }
+
+        private void cmb_Directorio_Tablas_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.ComboDirectorios();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Directorio_Tablas.Items.Add(Convert.ToString(fila["DIRECTORY_NAME"]));
+            }
+        }
+        private void cmb_Directorio_Schemas_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.ComboDirectorios();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Directorio_Schema.Items.Add(Convert.ToString(fila["DIRECTORY_NAME"]));
+            }
+        }
+        private void cmb_Directorio_Ver_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.ComboDirectorios();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Directorio_Ver.Items.Add(Convert.ToString(fila["DIRECTORY_NAME"]));
+            }
+        }
+        private void cmb_Directorio_Tablas_Recuperar_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.ComboDirectorios();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+               cmb_Directorio_Tablas_Recperar.Items.Add(Convert.ToString(fila["DIRECTORY_NAME"]));
+            }
+        }
+
+        private void cmb_Directorio_Schema_Recuperar_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.ComboDirectorios();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Directorio_Schema_Recuperar.Items.Add(Convert.ToString(fila["DIRECTORY_NAME"]));
+            }
         }
     }
 }

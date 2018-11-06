@@ -28,7 +28,7 @@ namespace Datos
             }
         }
 
-        public void Respaldo_Tabla(string conexion, string contrasena, string nombre_tabla)
+        public void Respaldo_Tabla(string conexion, string contrasena, string nombre_tabla,string directorio)
         {
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -38,13 +38,13 @@ namespace Datos
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
 
-            cmd.StandardInput.WriteLine("EXPDP " + conexion + "/" + contrasena + "@XE TABLES="+conexion+"." + nombre_tabla + " DIRECTORY=PRUEBA DUMPFILE=" + nombre_tabla + ".DMP LOGFILE=" + nombre_tabla + ".LOG;");
+            cmd.StandardInput.WriteLine("EXPDP " + conexion + "/" + contrasena + "@XE TABLES="+conexion+"." + nombre_tabla + " DIRECTORY="+directorio+" DUMPFILE=" + nombre_tabla + ".DMP LOGFILE=" + nombre_tabla + ".LOG;");
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             cmd.WaitForExit();
             Console.WriteLine(cmd.StandardOutput.ReadToEnd());
         }
-        public void Respaldo_Schema(string conexion, string contrasena)
+        public void Respaldo_Schema(string conexion, string contrasena,string direc)
         {
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -54,7 +54,7 @@ namespace Datos
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
 
-            cmd.StandardInput.WriteLine("EXPDP " + conexion + "/" + contrasena + "@XE SCHEMAS=" + conexion + " DIRECTORY=RESPALDO DUMPFILE=" + conexion + ".DMP LOGFILE=" + conexion + ".LOG;");
+            cmd.StandardInput.WriteLine("EXPDP " + conexion + "/" + contrasena + "@XE SCHEMAS=" + conexion + " DIRECTORY="+ direc + " DUMPFILE=" + conexion + ".DMP LOGFILE=" + conexion + ".LOG;");
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             cmd.WaitForExit();
@@ -77,7 +77,7 @@ namespace Datos
             Console.WriteLine(cmd.StandardOutput.ReadToEnd());
         }
 
-        public void Recuperar_Tabla(string conexion, string contrasena, string nombre_tabla)
+        public void Recuperar_Tabla(string conexion, string contrasena, string nombre_tabla,string direc)
         {
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -87,14 +87,14 @@ namespace Datos
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
 
-            cmd.StandardInput.WriteLine("IMPDP " + conexion + "/" + contrasena + "@XE TABLES="+conexion+"." + nombre_tabla + " DIRECTORY=RESPALDO DUMPFILE=" + nombre_tabla + ".DMP LOGFILE=" + nombre_tabla + ".LOG;");
+            cmd.StandardInput.WriteLine("IMPDP " + conexion + "/" + contrasena + "@XE TABLES="+conexion+"." + nombre_tabla + " DIRECTORY="+direc+" DUMPFILE=" + nombre_tabla + ".DMP LOGFILE=" + nombre_tabla + ".LOG;");
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             cmd.WaitForExit();
             Console.WriteLine(cmd.StandardOutput.ReadToEnd());
         }
 
-        public void Recuperar_Schema(string conexion, string contrasena)
+        public void Recuperar_Schema(string conexion, string contrasena,string direc)
         {
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -104,7 +104,7 @@ namespace Datos
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
 
-            cmd.StandardInput.WriteLine("IMPDP " + conexion + "/" + contrasena + "@XE SCHEMAS=" + conexion + " DIRECTORY=RESPALDO DUMPFILE=" + conexion + ".DMP LOGFILE=" + conexion + ".LOG;");
+            cmd.StandardInput.WriteLine("IMPDP " + conexion + "/" + contrasena + "@XE SCHEMAS=" + conexion + " DIRECTORY="+direc+" DUMPFILE=" + conexion + ".DMP LOGFILE=" + conexion + ".LOG;");
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             cmd.WaitForExit();
@@ -418,6 +418,21 @@ namespace Datos
             OracleCommand comando = new OracleCommand();
             comando.Connection = conn;
             comando.CommandText = "select DIRECTORY_PATH from all_directories where DIRECTORY_NAME = '"+directorio+"'";
+            Console.WriteLine(comando.CommandText);
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+        public DataTable ComboDirectorios()
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "select DIRECTORY_NAME from all_directories";
             Console.WriteLine(comando.CommandText);
             OracleDataAdapter adaptador = new OracleDataAdapter();
             adaptador.SelectCommand = comando;
