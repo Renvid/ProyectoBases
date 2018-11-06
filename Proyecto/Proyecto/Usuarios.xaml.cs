@@ -342,7 +342,130 @@ namespace ProyectoBases
                 cmb_Tabla_Auditoria_B.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
             }
         }
+        public void MostrarTunning()
+        {
+            dtg_Tunning.ItemsSource = datos.MostrarTunning().DefaultView;
+        }
+
+        private void dtg_Tunning_Initialized(object sender, EventArgs e)
+        {
+            MostrarTunning();
+        }
+
+        private void MostrarEstadisticas()
+        {
+            int valor = datos.Conexion(cmb_Ver_Auditoria.Text, txb_Contrasena_Auditoria.Text);
+            if (valor == 1)
+            {
+                dtg_Auditorias.ItemsSource = datos.MostrarAuditoria(cmb_Ver_Auditoria.Text, txb_Contrasena_Auditoria.Text).DefaultView;
+            }
+            else if (valor == 0)
+            {
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void cmb_Schema_Est_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.Schemas();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Schema_Est.Items.Add(Convert.ToString(fila["USERNAME"]));
+            }
+        }
+
+        private void cmb_Schema_Est_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cmb_tabla_Est.Items.Clear();
+            DataTable dt = datos.Tablas(cmb_Schema_Est.SelectedItem.ToString());
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_tabla_Est.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
+            }
+        }
+
+        private void btn_VerEst_Click(object sender, RoutedEventArgs e)
+        {
+            int valor = datos.Conexion(cmb_Schema_Est.Text, txb_Contrasena_Est.Text);
+            if (valor == 1)
+            {
+                dtg_Estadisticas.ItemsSource = datos.MostrarEstadisticas(cmb_Schema_Est.Text, txb_Contrasena_Est.Text,cmb_tabla_Est.Text).DefaultView;
+            }
+            else if (valor == 0)
+            {
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void btn_EstSchema_Click(object sender, RoutedEventArgs e)
+        {
+            datos.EstadisticaSchema(cmb_Schema_Est.Text);
+            MessageBox.Show("Estadistica Schema Creada Correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void btn_EstTabla_Click(object sender, RoutedEventArgs e)
+        {
+            datos.EstadisticaTabla(cmb_Schema_Est.Text,cmb_tabla_Est.Text);
+            MessageBox.Show("Estadistica Tabla Creada Correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void btn_Analizar_Click(object sender, RoutedEventArgs e)
+        {
+            datos.EstadisticaAnalizar(cmb_Schema_Est.Text, cmb_tabla_Est.Text);
+            MessageBox.Show("Estadistica Analizada", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
 
 
+        private void cmb_Schema_Plan_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.Schemas();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Schema_Plan.Items.Add(Convert.ToString(fila["USERNAME"]));
+            }
+        }
+
+        private void cmb_Schema_Plan_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cmb_Tabla_Plan.Items.Clear();
+            DataTable dt = datos.Tablas(cmb_Schema_Plan.SelectedItem.ToString());
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Tabla_Plan.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
+            }
+        }
+
+        private void btn_CrearIndex_Click(object sender, RoutedEventArgs e)
+        {
+            datos.CrearIndex(cmb_Tabla_Plan.Text,cmb_columna_Plan.Text);
+            MessageBox.Show("INDICE CREADO", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            MostrarTunning();
+        }
+
+        private void btn_CrearPlan_Click(object sender, RoutedEventArgs e)
+        {
+            datos.EjecutarPlan(txb_Plan.Text);
+            MessageBox.Show("PLAN CREADO CREADO", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            MostrarTunning();
+        }
+
+        private void btn_BorrarPlan_Click(object sender, RoutedEventArgs e)
+        {
+            datos.EliminarPlan();
+            MessageBox.Show("PLAN CREADO CREADO", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+            MostrarTunning();
+        }
+
+        private void cmb_Tabla_Plan_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cmb_columna_Plan.Items.Clear();
+            DataTable dt = datos.ComboColumnas(cmb_Tabla_Plan.SelectedItem.ToString());
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_columna_Plan.Items.Add(Convert.ToString(fila["column_name"]));
+            }
+        }
     }
 }

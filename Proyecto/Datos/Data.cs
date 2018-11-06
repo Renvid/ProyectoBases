@@ -602,6 +602,115 @@ namespace Datos
             OracleDataReader dr = comando.ExecuteReader();
             conn.Close();
         }
+        public DataTable MostrarTunning()
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "SELECT SUBSTR(LPAD(' ', LEVEL - 1) || OPERATION || ' (' || OPTIONS || ')',1,30 ) OPERACION,   OBJECT_NAME OBJETO, TO_DATE(TIMESTAMP) FROM PLAN_TABLE START WITH ID = 0 CONNECT BY PRIOR ID = PARENT_ID";
+            Console.WriteLine(comando.CommandText);
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+        public DataTable MostrarEstadisticas(string usuario,string contrasena,string ntabla)
+        {
+            string v_Conn = "DATA SOURCE=localhost:1521/XE;PERSIST SECURITY INFO=True;USER ID=" + usuario + ";PASSWORD = " + contrasena + "";
+            OracleConnection conn = new OracleConnection(v_Conn);
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "SELECT * FROM USER_TAB_COL_STATISTICS WHERE table_name = '"+ntabla+"'";
+            Console.WriteLine(comando.CommandText);
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+        public void EstadisticaSchema(string schema)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "EXEC dbms_stats.gather_schema_stats('"+schema+"', cascade => true)";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public void EstadisticaTabla(string schema,string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "EXEC DBMS_STATS.gather_table_stats('"+schema+"', '"+tabla+"', cascade => true)";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+
+        public void EstadisticaAnalizar(string schema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "ANALYZE TABLE "+schema+"."+tabla+" COMPUTE STATISTICS";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+
+        public DataTable ComboColumnas(string ntabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "select column_name from all_tab_columns where table_name = '"+ntabla+"'";
+            Console.WriteLine(comando.CommandText);
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+        public void EliminarPlan()
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "DELETE PLAN_TABLE";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+
+        public void EjecutarPlan(string plan)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = ""+plan+"";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public void CrearIndex(string tabla,string columna)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "CREATE INDEX IDX_" + tabla + " ON " + tabla+"("+columna+")";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
 
     }
 }

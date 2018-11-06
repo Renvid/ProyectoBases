@@ -209,5 +209,43 @@ namespace Logica
         {
             data.auditoriaSelectBorrar(esquema,tabla);
         }
+        public DataTable MostrarTunning()
+        {
+            return data.MostrarTunning();
+        }
+        public DataTable MostrarEstadisticas(string usuario, string contrasena, string ntabla)
+        {
+            return data.MostrarEstadisticas(usuario,contrasena,ntabla);
+        }
+        public void EstadisticaSchema(string schema)
+        {
+            data.EstadisticaSchema(schema);
+        }
+        public void EstadisticaTabla(string schema, string tabla)
+        {
+            data.EstadisticaTabla(schema,tabla);
+        }
+
+        public void EstadisticaAnalizar(string schema, string tabla)
+        {
+            data.EstadisticaAnalizar(schema, tabla);
+        }
+        public DataTable ComboColumnas(string ntabla)
+        {
+            return data.ComboColumnas(ntabla);
+        }
+        public void EliminarPlan()
+        {
+            data.EliminarPlan();
+        }
+
+        public void EjecutarPlan(string plan)
+        {
+            data.EjecutarPlan(plan);
+        }
+        public void CrearIndex(string tabla, string columna)
+        {
+            data.CrearIndex(tabla,columna);
+        }
     }
 }
