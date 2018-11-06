@@ -220,5 +220,129 @@ namespace ProyectoBases
                 cmb_Usuario_Permiso.Items.Add(Convert.ToString(fila["USERNAME"]));
             }
         }
+
+        private void cmb_Schema_Auditoria_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.Schemas();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Schema_Auditoria.Items.Add(Convert.ToString(fila["USERNAME"]));
+            }
+        }
+
+        private void cmb_Schema_Auditoria_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cmb_Tabla_Auditoria.Items.Clear();
+            DataTable dt = datos.Tablas(cmb_Schema_Auditoria.SelectedItem.ToString());
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Tabla_Auditoria.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
+            }
+        }
+
+        private void btn_CrearAuditoria_Click(object sender, RoutedEventArgs e)
+        {
+            if (cb_Insert_Auditoria.IsChecked == true)
+            {
+                datos.auditoriaInsert(cmb_Schema_Auditoria.Text,cmb_Tabla_Auditoria.Text);
+            }
+            if (cb_Delete_Auditoria.IsChecked == true)
+            {
+                datos.auditoriaDelete(cmb_Schema_Auditoria.Text, cmb_Tabla_Auditoria.Text);
+            }
+            if (cb_Select_Auditoria.IsChecked == true)
+            {
+                datos.auditoriaSelect(cmb_Schema_Auditoria.Text, cmb_Tabla_Auditoria.Text);
+            }
+            if (cb_Update_Auditoria.IsChecked == true)
+            {
+                datos.AuditoriaUpdate(cmb_Schema_Auditoria.Text, cmb_Tabla_Auditoria.Text);
+            }
+            if (cb_Full_Auditoria.IsChecked == true)
+            {
+                datos.auditoriaTotal(cmb_Schema_Auditoria.Text, cmb_Tabla_Auditoria.Text);
+            }
+            MessageBox.Show("AUDITORIA CREADA", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+        private void MostrarAuditoria()
+        {
+            int valor = datos.Conexion(cmb_Ver_Auditoria.Text, txb_Contrasena_Auditoria.Text);
+            if (valor == 1)
+            {
+                dtg_Auditorias.ItemsSource = datos.MostrarAuditoria(cmb_Ver_Auditoria.Text, txb_Contrasena_Auditoria.Text).DefaultView;
+            }
+            else if (valor == 0)
+            {
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void cmb_Ver_Auditoria_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.Schemas();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Ver_Auditoria.Items.Add(Convert.ToString(fila["USERNAME"]));
+            }
+        }
+
+        private void btn_VerAuditoria_Click(object sender, RoutedEventArgs e)
+        {
+            MostrarAuditoria();
+        }
+
+        private void btn_Iniciar_Auditoria_Click(object sender, RoutedEventArgs e)
+        {
+            datos.iniciarAuditoria();
+            MessageBox.Show("AuditoriaIniciada", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void btn_BorrarAuditoria_Click(object sender, RoutedEventArgs e)
+        {
+            if (cb_Insert_Auditoria_B.IsChecked == true)
+            {
+                datos.auditoriaInsertBorrar(cmb_Schema_Auditoria_B.Text, cmb_Tabla_Auditoria_B.Text);
+            }
+            if (cb_Delete_Auditoria_B.IsChecked == true)
+            {
+                datos.auditoriaDeleteBorrar(cmb_Schema_Auditoria_B.Text, cmb_Tabla_Auditoria_B.Text);
+            }
+            if (cb_Select_Auditoria_B.IsChecked == true)
+            {
+                datos.auditoriaSelectBorrar(cmb_Schema_Auditoria_B.Text, cmb_Tabla_Auditoria_B.Text);
+            }
+            if (cb_Update_Auditoria_B.IsChecked == true)
+            {
+                datos.AuditoriaUpdateBorrar(cmb_Schema_Auditoria_B.Text, cmb_Tabla_Auditoria_B.Text);
+            }
+            if (cb_Full_Auditoria_B.IsChecked == true)
+            {
+                datos.auditoriaTotalBorrar(cmb_Schema_Auditoria_B.Text, cmb_Tabla_Auditoria_B.Text);
+            }
+            MessageBox.Show("AUDITORIA BORRADA", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+        private void cmb_Schema_Auditoria_B_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.Schemas();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Schema_Auditoria_B.Items.Add(Convert.ToString(fila["USERNAME"]));
+            }
+        }
+
+        private void cmb_Schema_Auditoria_B_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cmb_Tabla_Auditoria_B.Items.Clear();
+            DataTable dt = datos.Tablas(cmb_Schema_Auditoria_B.SelectedItem.ToString());
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_Tabla_Auditoria_B.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
+            }
+        }
+
+
     }
 }

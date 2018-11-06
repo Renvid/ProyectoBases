@@ -441,6 +441,167 @@ namespace Datos
             conn.Close();
             return tabla;
         }
+        public void CrearDirectorio(string nombre,string ruta)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "CREATE OR REPLACE DIRECTORY "+nombre+" AS '"+ruta+"'";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+        public void EliminarDirectorio(string nombre)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "DROP DIRECTORY "+nombre+"";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+
+        public DataTable MostrarAuditoria(string usuario, string contrasena)
+        {
+            string v_Conn = "DATA SOURCE=localhost:1521/XE;PERSIST SECURITY INFO=True;USER ID=" + usuario + ";PASSWORD = " + contrasena + "";
+            OracleConnection conn = new OracleConnection(v_Conn);
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = " Select object_name, object_type, aud, del, ins, sel, upd,alt,aud,com,gra,ind,loc,ren,fbk from user_obj_audit_opts";
+            Console.WriteLine(comando.CommandText);
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            conn.Close();
+            return tabla;
+        }
+
+        public int iniciarAuditoria()
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand("alter system set audit_trail=DB scope=spfile", conn as OracleConnection);
+            comando.CommandType = CommandType.Text;
+            int v_Resultado = comando.ExecuteNonQuery();
+            conn.Close();
+            return v_Resultado;
+        }
+
+        public int auditoriaTotal(string esquema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand("audit all ON " + esquema + "." + tabla + " by access", conn as OracleConnection);
+            comando.CommandType = CommandType.Text;
+            int v_Resultado = comando.ExecuteNonQuery();
+            conn.Close();
+            return v_Resultado;
+        }
+
+        public int auditoriaInsert(string esquema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand("audit insert ON " + esquema + "." + tabla + " by access", conn as OracleConnection);
+            comando.CommandType = CommandType.Text;
+            int v_Resultado = comando.ExecuteNonQuery();
+            conn.Close();
+            return v_Resultado;
+        }
+
+        public int AuditoriaUpdate(string esquema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand("audit update ON " + esquema + "." + tabla + " by access", conn as OracleConnection);
+            comando.CommandType = CommandType.Text;
+            int v_Resultado = comando.ExecuteNonQuery();
+            conn.Close();
+            return v_Resultado;
+
+        }
+
+        public int auditoriaDelete(string esquema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand("audit delete ON " + esquema + "." + tabla + " by access", conn as OracleConnection);
+            comando.CommandType = CommandType.Text;
+            int v_Resultado = comando.ExecuteNonQuery();
+            conn.Close();
+            return v_Resultado;
+
+        }
+
+        public int auditoriaSelect(string esquema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand("audit select ON " + esquema + "." + tabla + " by access", conn as OracleConnection);
+            comando.CommandType = CommandType.Text;
+            int v_Resultado = comando.ExecuteNonQuery();
+            conn.Close();
+            return v_Resultado;
+
+        }
+
+        public void auditoriaTotalBorrar(string esquema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "NOAUDIT all ON "+esquema+"."+tabla+"";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+
+        public void auditoriaInsertBorrar(string esquema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "NOAUDIT INSERT ON " + esquema + "." + tabla + "";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+
+        public void AuditoriaUpdateBorrar(string esquema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "NOAUDIT UPDATE ON " + esquema + "." + tabla + "";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+
+        public void auditoriaDeleteBorrar(string esquema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "NOAUDIT DELETE ON " + esquema + "." + tabla + "";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
+
+        public void auditoriaSelectBorrar(string esquema, string tabla)
+        {
+            OracleConnection conn = DataBase.Conexion();
+            conn.Open();
+            OracleCommand comando = new OracleCommand();
+            comando.Connection = conn;
+            comando.CommandText = "NOAUDIT SELECT ON " + esquema + "." + tabla + "";
+            OracleDataReader dr = comando.ExecuteReader();
+            conn.Close();
+        }
 
     }
 }

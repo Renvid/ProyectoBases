@@ -46,7 +46,7 @@ Bases de Datos"/><Run Text=""/></TextBlock>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="50" Width="175">
                     <Border BorderBrush="Black" BorderThickness="1" Width="9" Background="#FF075062"/>
                     <Image Source="Imagenes\usuario.png" Width="30" Height="30" VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left"/>
-                    <TextBlock Text="Usuarios"  VerticalAlignment="Center" Margin="10,16,10,16.6" Foreground="White" FontSize="14" FontFamily="Global Sans Serif" />
+                    <TextBlock  VerticalAlignment="Center" Margin="10,6,10,6.6" Foreground="White" FontSize="14" FontFamily="Global Sans Serif" Height="37" ><Run Text="Usuarios,Auditoria "/><LineBreak/><Run Text="    y Performance"/></TextBlock>
                 </StackPanel>
             </ListViewItem>
             <ListViewItem x:Name="btn_Facturar"  Visibility="Collapsed" Background="{x:Null}" Width="185" Height="30"  >

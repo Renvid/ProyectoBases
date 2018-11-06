@@ -140,6 +140,16 @@
                     </Grid.ColumnDefinitions>
                     <DataGrid x:Name="dtg_MostrarDirectorios" Height="264" Margin="38,28,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="699"/>
                     <Button x:Name="Respaldo" Foreground="White" Content="Ver Directorios" HorizontalAlignment="Left" Margin="774,28,0,0" VerticalAlignment="Top" Width="118" Height="72" Click="Respaldo_Click" Background="#FF075062"/>
+                    <Label x:Name="txt_Copy15" Content="CREAR DIRECTORIOS " Margin="64,318,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="204"/>
+                    <Label x:Name="contrasena_Copy1" Content="Digite el path del directorio:" Margin="64,424,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
+                    <TextBox x:Name="txb_path_directorio" Margin="384,425,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
+                    <Label x:Name="contrasena_Copy2" Content="Digite el nombre del directorio:" Margin="64,371,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
+                    <TextBox x:Name="txb_nombre_directorio" Margin="384,372,0,0" TextWrapping="Wrap" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="237"/>
+                    <Button x:Name="btn_Crear_Directorio" Foreground="White" Content="Crear directorio" HorizontalAlignment="Left" Margin="448,484,0,0" VerticalAlignment="Top" Width="118" Height="72"  Background="#FF075062" Click="btn_Crear_Directorio_Click" />
+                    <Label x:Name="txt_Copy16" Content="ELIMINAR DIRECTORIOS" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="217" Margin="701,318,0,0"/>
+                    <Label x:Name="txt_nombreconexion_Copy1" Content="Seleccione el directorio a eliminar:" Margin="701,371,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
+                    <ComboBox x:Name="cmb_elminar_directorio" HorizontalAlignment="Left" Margin="1022,371,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_elminar_directorio_Initialized"  />
+                    <Button x:Name="btn_Eliminar_Directorio" Foreground="White" Content="  Eliminar&#xD;&#xA; Directorio" HorizontalAlignment="Left" Margin="931,425,0,0" VerticalAlignment="Top" Width="118" Height="72"  Background="#FF075062" Click="btn_Eliminar_Directorio_Click" />
                 </Grid>
             </TabItem>
             <TabItem Margin="0.2,0,-11.6,0.2" Padding="10">

@@ -55,8 +55,8 @@
                     <DataGrid x:Name="dtg_PermisosUsuario" Height="235" Margin="0,220,134,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="411"/>
                     <Button x:Name="btn_VerPermisosUsuario" Foreground="White" Content="Ver Permisos" HorizontalAlignment="Right" Height="29" Margin="0,183,257,0" VerticalAlignment="Top" Width="100" Background="#FF075062" Click="btn_VerPermisosUsuario_Click"/>
                     <ComboBox x:Name="cmb_Usuarios" Margin="0,79,134,0" VerticalAlignment="Top" Initialized="cmb_Usuarios_Initialized" HorizontalAlignment="Right" Width="223"/>
-                    <Label x:Name="txt_nombreconexion" Content="Seleccione el Usuario:" Margin="0,76,366,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Right" Width="179"/>
-                    <Label x:Name="txt_nombreconexion_Copy" Content="VER PERMISOS USUARIO" Margin="0,32,230,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Right" Width="315"/>
+                    <Label x:Name="txt_nombreconexion" Content="Seleccione el Usuario:" Margin="0,76,371,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Right" Width="179"/>
+                    <Label x:Name="txt_nombreconexion_Copy" Content="VER PERMISOS USUARIO" Margin="0,36,230,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Right" Width="315"/>
                     <Label x:Name="lbl_CreaTbs_Copy" Content="PERMISOS USUARIO" Foreground="White" HorizontalAlignment="Left" Height="30" Margin="37,256,0,0" VerticalAlignment="Top" Width="212"/>
                     <ComboBox x:Name="cmb_Usuarios_Permisos" Margin="225,294,0,0" VerticalAlignment="Top" Initialized="cmb_Usuarios_Permisos_Initialized" HorizontalAlignment="Left" Width="223"/>
                     <Label x:Name="txt_" Content="Seleccione el Usuario:" Margin="37,291,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
@@ -134,7 +134,62 @@
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Imagenes/edit-16.png" />
-                        <TextBlock Text=" Usuarios" Foreground="Black" VerticalAlignment="Center" Width="112" />
+                        <TextBlock Text=" Auditoria" Foreground="Black" VerticalAlignment="Center" Width="112" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Background="#FF262126" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="638*"/>
+                        <RowDefinition Height="13*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="0*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lbl_CreaTbs_Copy5" Content="CREAR AUDITORIA" Foreground="White" HorizontalAlignment="Left" Height="30" Margin="58,42,0,0" VerticalAlignment="Top" Width="212"/>
+                    <CheckBox x:Name="cb_Insert_Auditoria" Content="INSERT" FontSize="16" Foreground="White" HorizontalAlignment="Left" Margin="263,180,0,0" VerticalAlignment="Top" Height="24" Width="277"/>
+                    <CheckBox x:Name="cb_Delete_Auditoria" Content="DELETE" FontSize="16" Foreground="White" HorizontalAlignment="Left" Margin="263,222,0,0" VerticalAlignment="Top" Height="24" Width="277"/>
+                    <CheckBox x:Name="cb_Select_Auditoria" Content="SELECT" FontSize="16" Foreground="White" HorizontalAlignment="Left" Margin="263,264,0,0" VerticalAlignment="Top" Height="24" Width="277"/>
+                    <CheckBox x:Name="cb_Update_Auditoria" Content="UPDATE" FontSize="16" Foreground="White" HorizontalAlignment="Left" Margin="263,304,0,0" VerticalAlignment="Top" Height="24" Width="331"/>
+                    <Button x:Name="btn_CrearAuditoria" Foreground="White" Content="Crear Auditoria" HorizontalAlignment="Left" Height="24" Margin="263,386,0,0" VerticalAlignment="Top" Width="110" Background="#FF075062" Click="btn_CrearAuditoria_Click"   />
+                    <Label x:Name="txt_nombretabla_Copy3" Content="Seleccione la tabla:" Margin="58,131,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="166"/>
+                    <Label x:Name="txt_nombreconexion_Copy2" Content="Seleccione el Schema:" Margin="58,75,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
+                    <ComboBox x:Name="cmb_Schema_Auditoria" HorizontalAlignment="Left" Margin="263,77,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Schema_Auditoria_Initialized" SelectionChanged="cmb_Schema_Auditoria_SelectionChanged"/>
+                    <ComboBox x:Name="cmb_Tabla_Auditoria" HorizontalAlignment="Left" Margin="263,131,0,0" VerticalAlignment="Top" Width="237" Height="27"/>
+                    <DataGrid x:Name="dtg_Auditorias" Height="235" Margin="0,228,28.8,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="513"/>
+                    <Button x:Name="btn_VerAuditoria" Foreground="White" Content="Ver Auditoria" HorizontalAlignment="Right" Height="29" Margin="0,183,253.8,0" VerticalAlignment="Top" Width="100" Background="#FF075062" Click="btn_VerAuditoria_Click"/>
+                    <ComboBox x:Name="cmb_Ver_Auditoria" Margin="0,79,130.8,0" VerticalAlignment="Top"  HorizontalAlignment="Right" Width="223" Initialized="cmb_Ver_Auditoria_Initialized"/>
+                    <Label x:Name="txt_nombreconexion_Copy3" Content="Seleccione el Schema:" Margin="0,76,362.8,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Right" Width="179"/>
+                    <Label x:Name="txt_nombreconexion_Copy4" Content="VER AUDITORIAS" Margin="0,32,226.8,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Right" Width="315"/>
+                    <Label x:Name="lbl_TamTbs_Copy3" Content="Contraseña:" Foreground="White" Height="34" Margin="0,131,362.8,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="184"/>
+                    <TextBox x:Name="txb_Contrasena_Auditoria" Height="27" Margin="0,131,253.8,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100"/>
+                    <CheckBox x:Name="cb_Full_Auditoria" Content="FULL" FontSize="16" Foreground="White" HorizontalAlignment="Left" Margin="263,343,0,0" VerticalAlignment="Top" Height="24" Width="331"/>
+                    <Button x:Name="btn_Iniciar_Auditoria" Foreground="White" Content="  Iniciar &#xD;&#xA;Auditoria" HorizontalAlignment="Right" Height="83" Margin="0,75,611.8,0" VerticalAlignment="Top" Width="100" Background="#FF075062" Click="btn_Iniciar_Auditoria_Click" />
+                    <Label x:Name="lbl_CreaTbs_Copy6" Content="BORRAR AUDITORIA" Foreground="White" HorizontalAlignment="Left" Height="30" Margin="41,411,0,0" VerticalAlignment="Top" Width="212"/>
+                    <CheckBox x:Name="cb_Insert_Auditoria_B" Content="INSERT" FontSize="16" Foreground="White" HorizontalAlignment="Left" Margin="246,549,0,0" VerticalAlignment="Top" Height="24" Width="277"/>
+                    <CheckBox x:Name="cb_Delete_Auditoria_B" Content="DELETE" FontSize="16" Foreground="White" HorizontalAlignment="Left" Margin="246,591,0,0" VerticalAlignment="Top" Height="24" Width="277"/>
+                    <CheckBox x:Name="cb_Select_Auditoria_B" Content="SELECT" FontSize="16" Foreground="White" HorizontalAlignment="Left" Margin="381,549,0,0" VerticalAlignment="Top" Height="24" Width="277"/>
+                    <CheckBox x:Name="cb_Update_Auditoria_B" Content="UPDATE" FontSize="16" Foreground="White" HorizontalAlignment="Left" Margin="378,591,0,0" VerticalAlignment="Top" Height="24" Width="331"/>
+                    <Button x:Name="btn_BorrarAuditoria" Foreground="White" Content="Borrar Auditoria" HorizontalAlignment="Left" Height="24" Margin="246,620,0,0" VerticalAlignment="Top" Width="121" Background="#FF075062" Click="btn_BorrarAuditoria_Click" />
+                    <Label x:Name="txt_nombretabla_Copy4" Content="Seleccione la tabla:" Margin="41,500,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="166"/>
+                    <Label x:Name="txt_nombreconexion_Copy5" Content="Seleccione el Schema:" Margin="41,444,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Global Sans Serif" HorizontalAlignment="Left" Width="315"/>
+                    <ComboBox x:Name="cmb_Schema_Auditoria_B" HorizontalAlignment="Left" Margin="246,446,0,0" VerticalAlignment="Top" Width="237" Height="27" Initialized="cmb_Schema_Auditoria_B_Initialized" SelectionChanged="cmb_Schema_Auditoria_B_SelectionChanged"/>
+                    <ComboBox x:Name="cmb_Tabla_Auditoria_B" HorizontalAlignment="Left" Margin="246,500,0,0" VerticalAlignment="Top" Width="237" Height="27"/>
+                    <CheckBox x:Name="cb_Full_Auditoria_B" Content="FULL" FontSize="16" Foreground="White" HorizontalAlignment="Left" Margin="528,549,0,0" VerticalAlignment="Top" Height="24" Width="331"/>
+                </Grid>
+            </TabItem>
+            <TabItem Margin="0.2,0,-11.6,0.2" Padding="10">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FF474747" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Imagenes/edit-16.png" />
+                        <TextBlock Text=" Performance" Foreground="Black" VerticalAlignment="Center" Width="112" />
                     </StackPanel>
                 </TabItem.Header>
                 <Grid Background="#FF262126" >

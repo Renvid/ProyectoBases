@@ -143,5 +143,71 @@ namespace Logica
         {
             return data.ComboDirectorios();
         }
+        public void CrearDirectorio(string nombre, string ruta)
+        {
+            data.CrearDirectorio(nombre, ruta);
+        }
+        public void EliminarDirectorio(string nombre)
+        {
+            data.EliminarDirectorio(nombre);
+        }
+        public DataTable MostrarAuditoria(string usuario, string contrasena)
+        {
+            return data.MostrarAuditoria(usuario,contrasena);
+        }
+
+        public int iniciarAuditoria()
+        {
+            return data.iniciarAuditoria();
+        }
+
+        public int auditoriaTotal(string esquema, string tabla)
+        {
+            return data.auditoriaTotal(esquema,tabla);
+        }
+
+        public int auditoriaInsert(string esquema, string tabla)
+        {
+            return data.auditoriaInsert(esquema, tabla);
+        }
+
+        public int AuditoriaUpdate(string esquema, string tabla)
+        {
+            return data.AuditoriaUpdate(esquema, tabla);
+        }
+
+        public int auditoriaDelete(string esquema, string tabla)
+        {
+            return data.auditoriaDelete(esquema, tabla);
+        }
+
+        public int auditoriaSelect(string esquema, string tabla)
+        {
+            return data.auditoriaSelect(esquema, tabla);
+        }
+        public void auditoriaTotalBorrar(string esquema, string tabla)
+        {
+            data.auditoriaTotalBorrar(esquema, tabla);
+        }
+
+        public void auditoriaInsertBorrar(string esquema, string tabla)
+        {
+            data.auditoriaInsertBorrar(esquema, tabla);
+        }
+
+        public void AuditoriaUpdateBorrar(string esquema, string tabla)
+        {
+            data.AuditoriaUpdateBorrar(esquema, tabla);
+        }
+
+        public void auditoriaDeleteBorrar(string esquema, string tabla)
+        {
+            data.auditoriaDeleteBorrar(esquema, tabla);
+        }
+
+        public void auditoriaSelectBorrar(string esquema, string tabla)
+        {
+            data.auditoriaSelectBorrar(esquema,tabla);
+        }
     }
 }

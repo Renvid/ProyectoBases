@@ -282,5 +282,27 @@ namespace ProyectoBases
                 cmb_Directorio_Schema_Recuperar.Items.Add(Convert.ToString(fila["DIRECTORY_NAME"]));
             }
         }
+
+        private void btn_Crear_Directorio_Click(object sender, RoutedEventArgs e)
+        {
+            datos.CrearDirectorio(txb_nombre_directorio.Text,txb_path_directorio.Text);
+            MessageBox.Show("Directorio Creado", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void btn_Eliminar_Directorio_Click(object sender, RoutedEventArgs e)
+        {
+            datos.EliminarDirectorio(cmb_elminar_directorio.Text);
+            MessageBox.Show("Directorio Eliminado", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void cmb_elminar_directorio_Initialized(object sender, EventArgs e)
+        {
+            DataTable dt = datos.ComboDirectorios();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                cmb_elminar_directorio.Items.Add(Convert.ToString(fila["DIRECTORY_NAME"]));
+            }
+        }
     }
 }
